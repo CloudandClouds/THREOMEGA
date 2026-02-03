@@ -1,22 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import QRCode from 'qrcode';
+import { ShieldCheck, Monitor, Smartphone, Clock, Award } from 'lucide-react';
 
 const QRLanding = () => {
   const [qrCodeUrl, setQrCodeUrl] = useState('');
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Generate unique session ID
     const sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
     const exerciseUrl = `${window.location.origin}/exercise/${sessionId}`;
     
-    // Generate QR code
     QRCode.toDataURL(exerciseUrl, { 
       width: 300,
       margin: 2,
       color: {
-        dark: '#1e3a8a',
+        dark: '#000000',
         light: '#ffffff'
       }
     })
@@ -30,68 +29,122 @@ const QRLanding = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 relative overflow-hidden flex items-center justify-center p-6">
-      {/* Animated background elements */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{animationDelay: '2s'}}></div>
+    <div className="min-h-screen bg-[#0a0a0a] relative overflow-hidden flex flex-col items-center justify-center p-6 text-white">
+      {/* Premium Background Effects */}
+      <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-[#D4AF37] rounded-full mix-blend-screen filter blur-[120px] opacity-10"></div>
+      <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-[#8B0000] rounded-full mix-blend-screen filter blur-[120px] opacity-10"></div>
       
-      <div className="relative z-10 max-w-2xl w-full">
-        {/* Logo & Header */}
-        <div className="mb-12 text-center">
-          <div className="text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-300 via-cyan-300 to-blue-400 mb-3" style={{fontFamily: 'Georgia, serif'}}>
-            PONOOGUN
+      <div className="relative z-10 max-w-4xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        
+        {/* Left Side: Brand & Info */}
+        <div className="flex flex-col space-y-8">
+          <div className="animate-fade-in">
+            <div className="flex items-center gap-2 mb-4">
+              <div className="w-12 h-1 bg-[#D4AF37]"></div>
+              <span className="text-[#D4AF37] font-semibold tracking-widest text-sm uppercase">Nephrology Innovation</span>
+            </div>
+            <h1 className="text-7xl font-bold gold-text-gradient mb-6" style={{fontFamily: 'serif'}}>
+              PONOOGUN
+            </h1>
+            <p className="text-gray-400 text-lg leading-relaxed max-w-md">
+              Bridging the gap between clinical evidence and daily practice in hemodialysis care.
+            </p>
           </div>
-          <p className="text-slate-300 text-sm tracking-widest uppercase">Advancing Nephrology Care Through Innovation</p>
-        </div>
 
-        {/* Main Content */}
-        <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-8 mb-8">
-          <h1 className="text-3xl font-bold text-white mb-4 text-center" style={{fontFamily: 'Georgia, serif'}}>
-            PISCES-HD Evidence Exercise
-          </h1>
-          <p className="text-slate-300 text-center mb-8">
-            Scan the QR code below to begin the exercise on any device
-          </p>
-
-          {/* QR Code */}
-          <div className="bg-white rounded-2xl p-8 mb-8 flex flex-col items-center">
-            {qrCodeUrl ? (
-              <>
-                <img src={qrCodeUrl} alt="QR Code" className="mb-4" />
-                <p className="text-slate-600 text-sm text-center">
-                  Scan with your mobile camera or QR code app
-                </p>
-              </>
-            ) : (
-              <div className="w-64 h-64 flex items-center justify-center">
-                <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600"></div>
+          <div className="space-y-6">
+            <div className="flex items-center gap-4 group">
+              <div className="w-12 h-12 rounded-xl bg-gray-900 border border-gray-800 flex items-center justify-center group-hover:border-[#D4AF37] transition-colors">
+                <Clock className="w-6 h-6 text-[#D4AF37]" />
               </div>
-            )}
+              <div>
+                <h3 className="font-semibold text-white">3 Minute Exercise</h3>
+                <p className="text-gray-500 text-sm">Quick, impactful evidence review</p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-4 group">
+              <div className="w-12 h-12 rounded-xl bg-gray-900 border border-gray-800 flex items-center justify-center group-hover:border-[#EF4444] transition-colors">
+                <ShieldCheck className="w-6 h-6 text-[#EF4444]" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-white">Evidence Based</h3>
+                <p className="text-gray-500 text-sm">Focused on PISCES Trial (NEJM 2025)</p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-4 group">
+              <div className="w-12 h-12 rounded-xl bg-gray-900 border border-gray-800 flex items-center justify-center group-hover:border-[#D4AF37] transition-colors">
+                <Award className="w-6 h-6 text-[#D4AF37]" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-white">Appreciation Draw</h3>
+                <p className="text-gray-500 text-sm">Complete to enter the prize draw</p>
+              </div>
+            </div>
           </div>
-
-          {/* Direct Access Button */}
-          <button
-            onClick={handleDirectStart}
-            className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-semibold py-4 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
-          >
-            START EXERCISE DIRECTLY
-          </button>
-
-          <p className="text-slate-300 text-xs text-center mt-6">
-            ⏱️ Takes approximately 3 minutes • 🎁 Enter appreciation draw upon completion
-          </p>
         </div>
 
-        {/* Admin Access */}
-        <div className="text-center">
-          <button
-            onClick={() => navigate('/login')}
-            className="text-slate-400 hover:text-slate-200 text-sm underline transition-colors"
-          >
-            Admin Access
-          </button>
+        {/* Right Side: QR & Action */}
+        <div className="premium-card rounded-3xl p-8 lg:p-12 flex flex-col items-center">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold text-white mb-2">PISCES-HD Evidence</h2>
+            <p className="text-gray-400 text-sm">Scan to begin on your mobile device</p>
+          </div>
+
+          {/* QR Code Container */}
+          <div className="relative group mb-8">
+            <div className="absolute -inset-1 bg-gradient-to-r from-[#D4AF37] to-[#8B0000] rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+            <div className="relative bg-white rounded-xl p-4 shadow-2xl">
+              {qrCodeUrl ? (
+                <img src={qrCodeUrl} alt="QR Code" className="w-48 h-48 lg:w-64 lg:h-64" />
+              ) : (
+                <div className="w-48 h-48 lg:w-64 lg:h-64 flex items-center justify-center bg-gray-100 animate-pulse">
+                  <div className="w-12 h-12 border-4 border-[#D4AF37] border-t-transparent rounded-full animate-spin"></div>
+                </div>
+              )}
+            </div>
+          </div>
+
+          <div className="w-full space-y-4">
+            <div className="flex items-center justify-center gap-4 text-gray-500 text-xs uppercase tracking-widest mb-2">
+              <div className="h-[1px] flex-1 bg-gray-800"></div>
+              <span>OR</span>
+              <div className="h-[1px] flex-1 bg-gray-800"></div>
+            </div>
+
+            <button
+              onClick={handleDirectStart}
+              className="w-full bg-[#8B0000] hover:bg-[#A50000] text-white font-bold py-4 rounded-xl transition-all duration-300 shadow-lg shadow-red-900/20 flex items-center justify-center gap-3 group"
+            >
+              <Monitor className="w-5 h-5" />
+              START ON THIS DEVICE
+            </button>
+            <p className="text-center text-gray-500 text-xs">
+              Recommended for the best experience
+            </p>
+          </div>
         </div>
       </div>
+
+      {/* Admin Access footer */}
+      <button
+        onClick={() => navigate('/login')}
+        className="mt-12 text-gray-600 hover:text-[#D4AF37] text-sm uppercase tracking-widest transition-colors flex items-center gap-2"
+      >
+        <span className="w-4 h-[1px] bg-gray-800"></span>
+        Admin Portal
+        <span className="w-4 h-[1px] bg-gray-800"></span>
+      </button>
+
+      <style>{`
+        @keyframes fade-in {
+          from { opacity: 0; transform: translateY(10px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+          animation: fade-in 0.8s ease-out forwards;
+        }
+      `}</style>
     </div>
   );
 };

@@ -1,19 +1,3 @@
-// import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import "./App.css";
-// import Home from "./Pages/Home";
-
-// function App() {
-//   return (
-//     <BrowserRouter>
-//       <Routes>
-//         <Route path="/" element={<Home />} />
-//         <Route path="/home" element={<Home />} />
-//       </Routes>
-//     </BrowserRouter>
-//   );
-// }
-
-// export default App;
 
 
 import React from 'react';
@@ -30,7 +14,7 @@ function App() {
   return (
     <Router>
       <Routes>
-         <Route path="/1" element={<Home />} />
+         <Route path="/Home1" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/" element={<QRLanding />} />
         <Route path="/exercise/:sessionId" element={<ExerciseFlow />} />
