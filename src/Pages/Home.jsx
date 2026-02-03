@@ -10,6 +10,7 @@ import HowThreOmegaProtects from '../components/Home/HowThreOmegaProtects';
 import TestimonialsAndPricing from '../components/Home/TestimonialsAndPricing';
 import FAQ from '../components/Home/FAQ';
 import CallToActionAndFooter from '../components/Home/CallToActionAndFooter';
+import Scoreboard from '../components/Home/Scoreboard';
 
 
 class HomePage extends Component {
@@ -18,6 +19,7 @@ class HomePage extends Component {
       <div className="min-h-screen bg-white">
         <Navbar />
         <Banner />
+        <Scoreboard />
         <StatsCards/>
         <PiscesTrial/>
         <TrialResults/>

@@ -35,27 +35,27 @@ const AdminLogin = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 flex items-center justify-center p-6">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-gray-100 flex items-center justify-center p-6">
       <div className="max-w-md w-full">
         <div className="text-center mb-8">
-          <div className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-300 via-cyan-300 to-blue-400 mb-3" style={{fontFamily: 'Georgia, serif'}}>
+          <div className="text-5xl font-bold bg-gradient-to-r from-[#D4AF37] via-[#B8860B] to-[#8B0000] bg-clip-text text-transparent mb-3" style={{fontFamily: 'Georgia, serif'}}>
             PONOOGUN
           </div>
-          <p className="text-slate-300 text-sm">Admin Login</p>
+          <p className="text-gray-600 text-sm">Admin Login</p>
         </div>
 
-        <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-8">
-          <h2 className="text-2xl font-bold text-white mb-6 text-center">Administrator Access</h2>
+        <div className="bg-white border-2 border-gray-200 rounded-2xl p-8 shadow-xl">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">Administrator Access</h2>
 
           {error && (
-            <div className="bg-red-500/20 border border-red-500 text-red-200 px-4 py-3 rounded-lg mb-6">
+            <div className="bg-red-50 border-2 border-red-500 text-red-700 px-4 py-3 rounded-lg mb-6">
               {error}
             </div>
           )}
 
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label className="block text-sm font-semibold text-slate-200 mb-2 flex items-center gap-2">
+              <label className="block text-sm font-semibold text-gray-700 mb-2 flex items-center gap-2">
                 <Mail className="w-4 h-4" />
                 Email
               </label>
@@ -63,14 +63,14 @@ const AdminLogin = () => {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-blue-400"
+                className="w-full px-4 py-3 bg-white border-2 border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:border-[#D4AF37]"
                 placeholder="admin@ponoogun.com"
                 required
               />
             </div>
 
             <div>
-              <label className="block text-sm font-semibold text-slate-200 mb-2 flex items-center gap-2">
+              <label className="block text-sm font-semibold text-gray-700 mb-2 flex items-center gap-2">
                 <Lock className="w-4 h-4" />
                 Password
               </label>
@@ -78,7 +78,7 @@ const AdminLogin = () => {
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:border-blue-400"
+                className="w-full px-4 py-3 bg-white border-2 border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:border-[#D4AF37]"
                 placeholder="••••••••"
                 required
               />
@@ -87,7 +87,7 @@ const AdminLogin = () => {
             <button
               type="submit"
               disabled={loading}
-              className="w-full bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white font-semibold py-3 rounded-lg transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full bg-[#8B0000] hover:bg-[#A50000] text-white font-semibold py-3 rounded-lg transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
             >
               {loading ? 'Logging in...' : 'LOGIN'}
             </button>
@@ -96,7 +96,7 @@ const AdminLogin = () => {
           <div className="mt-6 text-center">
             <button
               onClick={() => navigate('/')}
-              className="text-slate-300 hover:text-white text-sm underline"
+              className="text-gray-600 hover:text-[#D4AF37] text-sm underline"
             >
               Back to Home
             </button>
