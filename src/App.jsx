@@ -14,9 +14,9 @@ function App() {
   return (
     <Router>
       <Routes>
-         <Route path="/Home1" element={<Home />} />
+         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/" element={<QRLanding />} />
+        <Route path="/QRLanding" element={<QRLanding />} />
         <Route path="/exercise/:sessionId" element={<ExerciseFlow />} />
         <Route path="/login" element={<AdminLogin />} />
         <Route 
