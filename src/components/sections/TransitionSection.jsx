@@ -1,5 +1,4 @@
-import React from 'react';
-import { CheckCircle2, ArrowRight } from 'lucide-react';
+import { ArrowRight, CheckCircle2 } from 'lucide-react'
 
 const TransitionSection = ({ onNext, onSkip }) => {
   return (
@@ -14,23 +13,28 @@ const TransitionSection = ({ onNext, onSkip }) => {
               <CheckCircle2 className="w-10 h-10 text-green-500" />
             </div>
           </div>
-          <h2 className="text-4xl font-bold text-white mb-3" style={{fontFamily: 'serif'}}>
+          <h2 className="text-4xl font-bold text-white mb-3" style={{ fontFamily: 'serif' }}>
             Section A Complete
           </h2>
-          <p className="text-[#D4AF37] font-medium tracking-widest uppercase text-xs">Core Evidence Mastered</p>
+          <p className="text-[#D4AF37] font-medium tracking-widest uppercase text-xs">
+            Core Evidence Mastered
+          </p>
         </div>
 
         <div className="premium-card rounded-2xl p-8 mb-10 border-[#D4AF37]/20 shadow-2xl animate-slide-up">
           <h3 className="text-xl font-bold text-white mb-4">Phase B: Practice Reflection</h3>
           <p className="text-gray-400 text-sm mb-6 leading-relaxed">
-            Exploration of real-world practice patterns and patient selection. These insights help bridge clinical data with daily care.
+            Exploration of real-world practice patterns and patient selection. These insights help
+            bridge clinical data with daily care.
           </p>
           <div className="flex items-center justify-center gap-2 py-2 px-4 bg-gray-900/50 rounded-lg inline-block mx-auto border border-gray-800">
-             <span className="text-[10px] text-gray-500 uppercase tracking-widest">Optional selection</span>
+            <span className="text-[10px] text-gray-500 uppercase tracking-widest">
+              Optional selection
+            </span>
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 animate-slide-up" style={{animationDelay: '0.2s'}}>
+        <div className="flex flex-col gap-4 animate-slide-up" style={{ animationDelay: '0.2s' }}>
           <button
             onClick={onNext}
             className="w-full bg-[#8B0000] hover:bg-[#A50000] text-white font-bold py-4 rounded-xl transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center gap-2 shadow-xl shadow-red-900/30 group"
@@ -65,7 +69,7 @@ const TransitionSection = ({ onNext, onSkip }) => {
         }
       `}</style>
     </div>
-  );
-};
+  )
+}
 
-export default TransitionSection;
+export default TransitionSection

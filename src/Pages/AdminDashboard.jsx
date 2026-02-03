@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { LogOut, Users, Award, Download, Search, Filter } from 'lucide-react';
+import { API_URL } from '../utils/url';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+
 
 const AdminDashboard = () => {
   const [registrations, setRegistrations] = useState([]);
@@ -73,13 +74,13 @@ const AdminDashboard = () => {
   };
 
   const filteredRegistrations = registrations.filter(reg => {
-    const matchesSearch = 
+    const matchesSearch =
       reg.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       reg.email.toLowerCase().includes(searchTerm.toLowerCase()) ||
       reg.city.toLowerCase().includes(searchTerm.toLowerCase());
-    
+
     const matchesFilter = filterQualification === 'all' || reg.qualification === filterQualification;
-    
+
     return matchesSearch && matchesFilter;
   });
 

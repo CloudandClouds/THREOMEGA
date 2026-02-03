@@ -1,5 +1,13 @@
-import React from 'react';
-import { Target, Phone, MessageCircle, Mail, MapPin, Facebook, Instagram, Twitter, Linkedin, Youtube } from 'lucide-react';
+import {
+  Facebook,
+  Instagram,
+  Linkedin,
+  MessageCircle,
+  Phone,
+  Target,
+  Twitter,
+  Youtube,
+} from 'lucide-react'
 
 const CallToActionAndFooter = () => {
   const styles = {
@@ -12,60 +20,64 @@ const CallToActionAndFooter = () => {
     lightBg: '#F8F9FA',
     red: '#C41E3A',
     darkBg: '#2D2D2D',
-    darkerBg: '#1A1A1A'
-  };
+    darkerBg: '#1A1A1A',
+  }
 
   const quickLinks = [
     { name: 'About Us', href: '#' },
     { name: 'How It Works', href: '#' },
     { name: 'Pricing', href: '#' },
     { name: 'Order Now', href: '#' },
-    { name: 'Subscription', href: '#' }
-  ];
+    { name: 'Subscription', href: '#' },
+  ]
 
   const resources = [
     { name: 'FOCUS Trial', href: '#' },
     { name: 'Patient Guides', href: '#' },
     { name: 'Clinical Portal', href: '#' },
     { name: 'Blog', href: '#' },
-    { name: 'Research Lib', href: '#' }
-  ];
+    { name: 'Research Lib', href: '#' },
+  ]
 
   const support = [
     { name: 'FAQ', href: '#' },
     { name: 'Contact Us', href: '#' },
     { name: 'Track Order', href: '#' },
     { name: 'Prescription', href: '#' },
-    { name: 'Feedback', href: '#' }
-  ];
+    { name: 'Feedback', href: '#' },
+  ]
 
   const legal = [
     { name: 'Privacy Policy', href: '#' },
     { name: 'Terms Service', href: '#' },
     { name: 'Refund Policy', href: '#' },
-    { name: 'Disclaimer', href: '#' }
-  ];
+    { name: 'Disclaimer', href: '#' },
+  ]
 
   const socialLinks = [
     { icon: Facebook, href: '#', color: '#1877F2' },
     { icon: Instagram, href: '#', color: '#E4405F' },
     { icon: Twitter, href: '#', color: '#1DA1F2' },
     { icon: Linkedin, href: '#', color: '#0A66C2' },
-    { icon: Youtube, href: '#', color: '#FF0000' }
-  ];
+    { icon: Youtube, href: '#', color: '#FF0000' },
+  ]
 
   const certifications = [
-    { name: 'ISO', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/ISO_Logo_%28Red_square%29.svg/1200px-ISO_Logo_%28Red_square%29.svg.png' },
+    {
+      name: 'ISO',
+      image:
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/ISO_Logo_%28Red_square%29.svg/1200px-ISO_Logo_%28Red_square%29.svg.png',
+    },
     { name: 'GMP', image: 'https://via.placeholder.com/60x40/FFD700/000000?text=GMP' },
-    { name: 'FDA', image: 'https://via.placeholder.com/60x40/0066CC/FFFFFF?text=FDA' }
-  ];
+    { name: 'FDA', image: 'https://via.placeholder.com/60x40/0066CC/FFFFFF?text=FDA' },
+  ]
 
   const paymentMethods = [
     { name: 'Visa', image: 'https://via.placeholder.com/60x40/1A1F71/FFFFFF?text=VISA' },
     { name: 'MasterCard', image: 'https://via.placeholder.com/60x40/EB001B/FFFFFF?text=MC' },
     { name: 'PayPal', image: 'https://via.placeholder.com/60x40/003087/FFFFFF?text=PayPal' },
-    { name: 'UPI', image: 'https://via.placeholder.com/60x40/097939/FFFFFF?text=UPI' }
-  ];
+    { name: 'UPI', image: 'https://via.placeholder.com/60x40/097939/FFFFFF?text=UPI' },
+  ]
 
   return (
     <div>
@@ -84,10 +96,8 @@ const CallToActionAndFooter = () => {
             </div>
 
             {/* Title */}
-            <h2 className="text-4xl font-bold text-white mb-4">
-              READY TO PROTECT YOUR HEART?
-            </h2>
-            
+            <h2 className="text-4xl font-bold text-white mb-4">READY TO PROTECT YOUR HEART?</h2>
+
             {/* Subtitle */}
             <p className="text-lg italic text-white mb-8" style={{ opacity: 0.9 }}>
               "Join 2,500+ Hemodialysis Patients Taking Control of Their Cardiovascular Health"
@@ -101,7 +111,7 @@ const CallToActionAndFooter = () => {
                   className="px-8 py-3 font-bold rounded-full transition-opacity hover:opacity-90"
                   style={{
                     backgroundColor: styles.background,
-                    color: styles.text
+                    color: styles.text,
                   }}
                 >
                   ORDER NOW
@@ -114,7 +124,7 @@ const CallToActionAndFooter = () => {
                   className="px-8 py-3 font-bold rounded-full transition-opacity hover:opacity-90"
                   style={{
                     backgroundColor: styles.background,
-                    color: styles.text
+                    color: styles.text,
                   }}
                 >
                   GET SAMPLES
@@ -127,7 +137,7 @@ const CallToActionAndFooter = () => {
                   className="px-8 py-3 font-bold rounded-full transition-opacity hover:opacity-90"
                   style={{
                     backgroundColor: styles.background,
-                    color: styles.text
+                    color: styles.text,
                   }}
                 >
                   PARTNER
@@ -176,7 +186,11 @@ const CallToActionAndFooter = () => {
               <ul className="space-y-2">
                 {quickLinks.map((link, idx) => (
                   <li key={idx}>
-                    <a href={link.href} className="text-white text-sm hover:opacity-70 transition-opacity" style={{ opacity: 0.8 }}>
+                    <a
+                      href={link.href}
+                      className="text-white text-sm hover:opacity-70 transition-opacity"
+                      style={{ opacity: 0.8 }}
+                    >
                       {link.name}
                     </a>
                   </li>
@@ -190,7 +204,11 @@ const CallToActionAndFooter = () => {
               <ul className="space-y-2">
                 {resources.map((link, idx) => (
                   <li key={idx}>
-                    <a href={link.href} className="text-white text-sm hover:opacity-70 transition-opacity" style={{ opacity: 0.8 }}>
+                    <a
+                      href={link.href}
+                      className="text-white text-sm hover:opacity-70 transition-opacity"
+                      style={{ opacity: 0.8 }}
+                    >
                       {link.name}
                     </a>
                   </li>
@@ -204,7 +222,11 @@ const CallToActionAndFooter = () => {
               <ul className="space-y-2">
                 {support.map((link, idx) => (
                   <li key={idx}>
-                    <a href={link.href} className="text-white text-sm hover:opacity-70 transition-opacity" style={{ opacity: 0.8 }}>
+                    <a
+                      href={link.href}
+                      className="text-white text-sm hover:opacity-70 transition-opacity"
+                      style={{ opacity: 0.8 }}
+                    >
                       {link.name}
                     </a>
                   </li>
@@ -218,7 +240,11 @@ const CallToActionAndFooter = () => {
               <ul className="space-y-2">
                 {legal.map((link, idx) => (
                   <li key={idx}>
-                    <a href={link.href} className="text-white text-sm hover:opacity-70 transition-opacity" style={{ opacity: 0.8 }}>
+                    <a
+                      href={link.href}
+                      className="text-white text-sm hover:opacity-70 transition-opacity"
+                      style={{ opacity: 0.8 }}
+                    >
                       {link.name}
                     </a>
                   </li>
@@ -231,7 +257,7 @@ const CallToActionAndFooter = () => {
               <h4 className="text-white font-bold mb-4 text-sm">CONNECT</h4>
               <div className="flex gap-3">
                 {socialLinks.map((social, idx) => {
-                  const IconComponent = social.icon;
+                  const IconComponent = social.icon
                   return (
                     <a
                       key={idx}
@@ -241,14 +267,13 @@ const CallToActionAndFooter = () => {
                     >
                       <IconComponent className="w-4 h-4 text-white" />
                     </a>
-                  );
+                  )
                 })}
               </div>
             </div>
           </div>
 
           {/* Contact Section */}
-        
 
           {/* Bottom Bar */}
           <div className="border-t py-6 text-center" style={{ borderColor: styles.red }}>
@@ -256,7 +281,8 @@ const CallToActionAndFooter = () => {
               © 2025 Ponogcn™. All rights reserved
             </p>
             <p className="text-white text-xs mb-2" style={{ opacity: 0.5 }}>
-              DISCLAIMER: This product is not intended to diagnose, treat, cure, or prevent any disease. Consult your healthcare provider before use. Results may vary.
+              DISCLAIMER: This product is not intended to diagnose, treat, cure, or prevent any
+              disease. Consult your healthcare provider before use. Results may vary.
             </p>
             <p className="text-white text-xs italic" style={{ opacity: 0.5 }}>
               *Evidence Informed Care. Patient-Centered Results.*
@@ -265,7 +291,7 @@ const CallToActionAndFooter = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default CallToActionAndFooter;
+export default CallToActionAndFooter

@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { Heart, User, CheckCircle, Package, Truck, CreditCard, HeadphonesIcon } from 'lucide-react';
+import { CheckCircle, CreditCard, HeadphonesIcon, Heart, Package, Truck } from 'lucide-react'
+import { useState } from 'react'
 
 const TestimonialsAndPricing = () => {
-  const [activeTab, setActiveTab] = useState('all');
+  const [activeTab, setActiveTab] = useState('all')
 
   const styles = {
     primary: '#1297E4',
@@ -14,28 +14,20 @@ const TestimonialsAndPricing = () => {
     lightBg: '#F8F9FA',
     red: '#C41E3A',
     green: '#10B981',
-    darkBg: '#3A3A3A'
-  };
+    darkBg: '#3A3A3A',
+  }
 
   const testimonial = {
     name: 'Ramesh, 35 - Coimbatore',
     location: '2 years on Dialysis',
     treatment: 'Before THREOMEGA™:',
-    beforePoints: [
-      'Hospitalization/year',
-      'Constant worry about heart',
-      ''
-    ],
+    beforePoints: ['Hospitalization/year', 'Constant worry about heart', ''],
     afterTitle: 'After 6 Months:',
-    afterPoints: [
-      'Zero hospitalizations',
-      'Better energy',
-      'Peace of mind'
-    ],
+    afterPoints: ['Zero hospitalizations', 'Better energy', 'Peace of mind'],
     quote: '"My doctor is impressed with my progress."',
     author: 'VERIFIED PATIENT',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80'
-  };
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80',
+  }
 
   const packages = [
     {
@@ -46,7 +38,7 @@ const TestimonialsAndPricing = () => {
       price: '399',
       originalPrice: null,
       popular: false,
-      savings: null
+      savings: null,
     },
     {
       id: 'monthly',
@@ -56,7 +48,7 @@ const TestimonialsAndPricing = () => {
       price: '1,349',
       originalPrice: '1,599',
       popular: true,
-      savings: 'Save 15%'
+      savings: 'Save 15%',
     },
     {
       id: 'value',
@@ -66,16 +58,16 @@ const TestimonialsAndPricing = () => {
       price: '2,399',
       originalPrice: '4,047',
       popular: false,
-      savings: 'Save 40%'
-    }
-  ];
+      savings: 'Save 40%',
+    },
+  ]
 
   const benefits = [
     { icon: Package, text: 'SUBSCRIBE & SAVE EXTRA 10%' },
     { icon: Truck, text: 'Free Shipping on orders 799+' },
     { icon: CreditCard, text: '100% Secure Checkout' },
-    { icon: HeadphonesIcon, text: '24/7hr Money-Back Guarantee' }
-  ];
+    { icon: HeadphonesIcon, text: '24/7hr Money-Back Guarantee' },
+  ]
 
   return (
     <div>
@@ -86,14 +78,9 @@ const TestimonialsAndPricing = () => {
           <div className="text-center mb-12">
             <div className="flex items-center justify-center mb-4">
               <Heart className="w-8 h-8 mr-3" style={{ color: styles.green }} />
-              <h2 className="text-4xl font-bold text-white">
-                REAL RESULTS FROM REAL PEOPLE
-              </h2>
+              <h2 className="text-4xl font-bold text-white">REAL RESULTS FROM REAL PEOPLE</h2>
             </div>
-            <div 
-              className="w-24 h-1 mx-auto mb-8"
-              style={{ backgroundColor: styles.gold }}
-            ></div>
+            <div className="w-24 h-1 mx-auto mb-8" style={{ backgroundColor: styles.gold }}></div>
 
             {/* Tabs */}
             <div className="flex justify-center gap-4 mb-8">
@@ -103,9 +90,15 @@ const TestimonialsAndPricing = () => {
                   onClick={() => setActiveTab(tab.toLowerCase().replace(/\s+/g, '-'))}
                   className="px-6 py-2 rounded-full font-semibold transition-all"
                   style={{
-                    backgroundColor: activeTab === tab.toLowerCase().replace(/\s+/g, '-') ? styles.gold : 'transparent',
-                    color: activeTab === tab.toLowerCase().replace(/\s+/g, '-') ? styles.text : styles.background,
-                    border: `2px solid ${activeTab === tab.toLowerCase().replace(/\s+/g, '-') ? styles.gold : styles.silver}`
+                    backgroundColor:
+                      activeTab === tab.toLowerCase().replace(/\s+/g, '-')
+                        ? styles.gold
+                        : 'transparent',
+                    color:
+                      activeTab === tab.toLowerCase().replace(/\s+/g, '-')
+                        ? styles.text
+                        : styles.background,
+                    border: `2px solid ${activeTab === tab.toLowerCase().replace(/\s+/g, '-') ? styles.gold : styles.silver}`,
                   }}
                 >
                   {tab}
@@ -115,11 +108,11 @@ const TestimonialsAndPricing = () => {
           </div>
 
           {/* Testimonial Card */}
-          <div 
+          <div
             className="border-2 rounded-lg p-8 max-w-4xl mx-auto"
             style={{
               backgroundColor: styles.background,
-              borderColor: styles.silver
+              borderColor: styles.silver,
             }}
           >
             <div className="grid md:grid-cols-12 gap-6">
@@ -151,14 +144,20 @@ const TestimonialsAndPricing = () => {
                       {testimonial.treatment}
                     </h4>
                     <div className="space-y-2">
-                      {testimonial.beforePoints.map((point, idx) => (
-                        point && (
-                          <div key={idx} className="flex items-start">
-                            <div className="w-2 h-2 mt-2 mr-2 flex-shrink-0" style={{ backgroundColor: styles.red }}></div>
-                            <span className="text-sm" style={{ color: styles.text }}>{point}</span>
-                          </div>
-                        )
-                      ))}
+                      {testimonial.beforePoints.map(
+                        (point, idx) =>
+                          point && (
+                            <div key={idx} className="flex items-start">
+                              <div
+                                className="w-2 h-2 mt-2 mr-2 flex-shrink-0"
+                                style={{ backgroundColor: styles.red }}
+                              ></div>
+                              <span className="text-sm" style={{ color: styles.text }}>
+                                {point}
+                              </span>
+                            </div>
+                          )
+                      )}
                     </div>
                   </div>
 
@@ -170,8 +169,13 @@ const TestimonialsAndPricing = () => {
                     <div className="space-y-2">
                       {testimonial.afterPoints.map((point, idx) => (
                         <div key={idx} className="flex items-start">
-                          <CheckCircle className="w-4 h-4 mt-0.5 mr-2 flex-shrink-0" style={{ color: styles.green }} />
-                          <span className="text-sm" style={{ color: styles.text }}>{point}</span>
+                          <CheckCircle
+                            className="w-4 h-4 mt-0.5 mr-2 flex-shrink-0"
+                            style={{ color: styles.green }}
+                          />
+                          <span className="text-sm" style={{ color: styles.text }}>
+                            {point}
+                          </span>
                         </div>
                       ))}
                     </div>
@@ -179,11 +183,11 @@ const TestimonialsAndPricing = () => {
                 </div>
 
                 {/* Quote */}
-                <div 
+                <div
                   className="border-l-4 pl-4 py-2 mb-2"
-                  style={{ 
+                  style={{
                     borderColor: styles.gold,
-                    backgroundColor: '#FFFBEB'
+                    backgroundColor: '#FFFBEB',
                   }}
                 >
                   <p className="text-lg italic font-semibold" style={{ color: styles.text }}>
@@ -199,7 +203,7 @@ const TestimonialsAndPricing = () => {
 
           {/* Show More Button */}
           <div className="text-center mt-8">
-            <button 
+            <button
               className="text-white font-semibold hover:opacity-80 transition-opacity"
               style={{ color: styles.background }}
             >
@@ -231,12 +235,12 @@ const TestimonialsAndPricing = () => {
                 style={{
                   backgroundColor: styles.background,
                   borderColor: pkg.popular ? styles.gold : styles.silver,
-                  borderWidth: pkg.popular ? '3px' : '2px'
+                  borderWidth: pkg.popular ? '3px' : '2px',
                 }}
               >
                 {/* Popular Badge */}
                 {pkg.popular && (
-                  <div 
+                  <div
                     className="absolute -top-3 left-1/2 transform -translate-x-1/2 px-4 py-1 rounded-full text-xs font-bold text-white"
                     style={{ backgroundColor: styles.red }}
                   >
@@ -246,7 +250,7 @@ const TestimonialsAndPricing = () => {
 
                 {/* Savings Badge */}
                 {pkg.savings && (
-                  <div 
+                  <div
                     className="absolute -top-3 right-4 px-3 py-1 rounded-full text-xs font-bold"
                     style={{ backgroundColor: styles.gold, color: styles.text }}
                   >
@@ -267,7 +271,10 @@ const TestimonialsAndPricing = () => {
                 {/* Price */}
                 <div className="mb-4">
                   {pkg.originalPrice && (
-                    <p className="text-sm line-through mb-1" style={{ color: styles.text, opacity: 0.4 }}>
+                    <p
+                      className="text-sm line-through mb-1"
+                      style={{ color: styles.text, opacity: 0.4 }}
+                    >
                       ₹{pkg.originalPrice}
                     </p>
                   )}
@@ -287,7 +294,7 @@ const TestimonialsAndPricing = () => {
                   style={{
                     backgroundColor: pkg.popular ? styles.red : styles.background,
                     color: pkg.popular ? styles.background : styles.text,
-                    border: `2px solid ${pkg.popular ? styles.red : styles.text}`
+                    border: `2px solid ${pkg.popular ? styles.red : styles.text}`,
                   }}
                 >
                   ORDER
@@ -299,28 +306,31 @@ const TestimonialsAndPricing = () => {
           {/* Benefits */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
             {benefits.map((benefit, idx) => {
-              const IconComponent = benefit.icon;
+              const IconComponent = benefit.icon
               return (
-                <div 
-                  key={idx} 
+                <div
+                  key={idx}
                   className="flex items-center p-4 border rounded-lg"
                   style={{
                     backgroundColor: styles.background,
-                    borderColor: styles.silver
+                    borderColor: styles.silver,
                   }}
                 >
-                  <IconComponent className="w-6 h-6 mr-3 flex-shrink-0" style={{ color: styles.primary }} />
+                  <IconComponent
+                    className="w-6 h-6 mr-3 flex-shrink-0"
+                    style={{ color: styles.primary }}
+                  />
                   <span className="text-xs font-semibold" style={{ color: styles.text }}>
                     {benefit.text}
                   </span>
                 </div>
-              );
+              )
             })}
           </div>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default TestimonialsAndPricing;
+export default TestimonialsAndPricing

@@ -3,8 +3,9 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { Lock, Mail } from 'lucide-react';
+import { API_URL } from '../utils/url';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+
 
 const AdminLogin = () => {
   const [email, setEmail] = useState('');

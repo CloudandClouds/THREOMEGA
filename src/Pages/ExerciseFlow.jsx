@@ -9,8 +9,7 @@ import BrandSection from '../components/sections/BrandSection';
 import PrizesSection from '../components/sections/PrizesSection';
 import RegistrationSection from '../components/sections/RegistrationSection';
 import ConfirmationSection from '../components/sections/ConfirmationSection';
-
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+import { API_URL } from '../utils/url'
 
 const ExerciseFlow = () => {
   const { sessionId } = useParams();
@@ -60,7 +59,7 @@ const ExerciseFlow = () => {
         answers,
         completedAt: new Date()
       });
-      
+
       setFormData(data);
       setCurrentScreen(currentScreen + 1);
     } catch (error) {

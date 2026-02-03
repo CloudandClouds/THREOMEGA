@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react'
 
 class Banner extends Component {
   render() {
@@ -41,12 +41,7 @@ class Banner extends Component {
                 </button>
                 <button className="bg-[#DC2626] hover:bg-[#B91C1C] text-white px-8 py-3 rounded-full text-sm font-medium transition-all uppercase tracking-wide flex items-center gap-2">
                   ORDER NOW
-                  <svg
-                    className="w-4 h-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -92,7 +87,7 @@ class Banner extends Component {
                           <stop offset="100%" style={{ stopColor: '#DC2626', stopOpacity: 1 }} />
                         </linearGradient>
                       </defs>
-                      
+
                       {/* Heart shape */}
                       <path
                         d="M200,350 C200,350 50,250 50,150 C50,100 75,75 100,75 C125,75 150,90 200,150 C250,90 275,75 300,75 C325,75 350,100 350,150 C350,250 200,350 200,350 Z"
@@ -100,7 +95,7 @@ class Banner extends Component {
                         stroke="#B91C1C"
                         strokeWidth="3"
                       />
-                      
+
                       {/* Blood vessels */}
                       <g className="opacity-80">
                         <circle cx="200" cy="120" r="8" fill="#3B82F6" />
@@ -109,16 +104,58 @@ class Banner extends Component {
                         <circle cx="160" cy="200" r="8" fill="#3B82F6" />
                         <circle cx="240" cy="200" r="8" fill="#3B82F6" />
                         <circle cx="200" cy="240" r="8" fill="#3B82F6" />
-                        
+
                         {/* Connecting lines */}
-                        <line x1="200" y1="120" x2="180" y2="160" stroke="#60A5FA" strokeWidth="4" />
-                        <line x1="200" y1="120" x2="220" y2="160" stroke="#60A5FA" strokeWidth="4" />
-                        <line x1="180" y1="160" x2="160" y2="200" stroke="#60A5FA" strokeWidth="4" />
-                        <line x1="220" y1="160" x2="240" y2="200" stroke="#60A5FA" strokeWidth="4" />
-                        <line x1="160" y1="200" x2="200" y2="240" stroke="#60A5FA" strokeWidth="4" />
-                        <line x1="240" y1="200" x2="200" y2="240" stroke="#60A5FA" strokeWidth="4" />
+                        <line
+                          x1="200"
+                          y1="120"
+                          x2="180"
+                          y2="160"
+                          stroke="#60A5FA"
+                          strokeWidth="4"
+                        />
+                        <line
+                          x1="200"
+                          y1="120"
+                          x2="220"
+                          y2="160"
+                          stroke="#60A5FA"
+                          strokeWidth="4"
+                        />
+                        <line
+                          x1="180"
+                          y1="160"
+                          x2="160"
+                          y2="200"
+                          stroke="#60A5FA"
+                          strokeWidth="4"
+                        />
+                        <line
+                          x1="220"
+                          y1="160"
+                          x2="240"
+                          y2="200"
+                          stroke="#60A5FA"
+                          strokeWidth="4"
+                        />
+                        <line
+                          x1="160"
+                          y1="200"
+                          x2="200"
+                          y2="240"
+                          stroke="#60A5FA"
+                          strokeWidth="4"
+                        />
+                        <line
+                          x1="240"
+                          y1="200"
+                          x2="200"
+                          y2="240"
+                          stroke="#60A5FA"
+                          strokeWidth="4"
+                        />
                       </g>
-                      
+
                       {/* Geometric pattern overlay */}
                       <g className="opacity-30">
                         <path d="M 150,140 L 250,140 L 200,200 Z" fill="#FFFFFF" />
@@ -132,8 +169,8 @@ class Banner extends Component {
           </div>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default Banner;
+export default Banner

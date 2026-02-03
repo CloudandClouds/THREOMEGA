@@ -1,5 +1,4 @@
-import React from 'react';
-import { Beaker, Check, ArrowRight } from 'lucide-react';
+import { ArrowRight, Beaker, Check } from 'lucide-react'
 
 const BrandSection = ({ onNext }) => {
   return (
@@ -10,13 +9,15 @@ const BrandSection = ({ onNext }) => {
 
       <div className="max-w-xl w-full relative z-10 flex-1 flex flex-col justify-center">
         <div className="text-center mb-12 animate-fade-in">
-          <div className="text-7xl font-bold mb-4" style={{fontFamily: 'serif'}}>
+          <div className="text-7xl font-bold mb-4" style={{ fontFamily: 'serif' }}>
             <span className="gold-text-gradient">3ω</span>
           </div>
-          <h1 className="text-4xl font-bold text-white mb-2" style={{fontFamily: 'serif'}}>
+          <h1 className="text-4xl font-bold text-white mb-2" style={{ fontFamily: 'serif' }}>
             ThreOmega™
           </h1>
-          <p className="text-[#D4AF37] text-xs tracking-[0.3em] font-semibold uppercase">Omega-3 for Hemodialysis Patients</p>
+          <p className="text-[#D4AF37] text-xs tracking-[0.3em] font-semibold uppercase">
+            Omega-3 for Hemodialysis Patients
+          </p>
         </div>
 
         <div className="premium-card rounded-3xl p-8 mb-10 shadow-2xl relative overflow-hidden border-[#D4AF37]/10">
@@ -31,11 +32,15 @@ const BrandSection = ({ onNext }) => {
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-gray-900/50 p-6 rounded-2xl border border-gray-800">
                   <span className="text-gray-500 text-xs block mb-1">EPA per capsule</span>
-                  <span className="text-3xl font-bold text-white">400 <span className="text-sm font-normal text-gray-500">mg</span></span>
+                  <span className="text-3xl font-bold text-white">
+                    400 <span className="text-sm font-normal text-gray-500">mg</span>
+                  </span>
                 </div>
                 <div className="bg-gray-900/50 p-6 rounded-2xl border border-gray-800">
                   <span className="text-gray-500 text-xs block mb-1">DHA per capsule</span>
-                  <span className="text-3xl font-bold text-white">200 <span className="text-sm font-normal text-gray-500">mg</span></span>
+                  <span className="text-3xl font-bold text-white">
+                    200 <span className="text-sm font-normal text-gray-500">mg</span>
+                  </span>
                 </div>
               </div>
             </div>
@@ -48,9 +53,18 @@ const BrandSection = ({ onNext }) => {
                 Evidence-Based Dosing
               </h3>
               <div className="space-y-3 bg-gray-900/30 p-6 rounded-2xl border border-gray-800">
-                <div className="flex justify-between items-center"><span className="text-gray-400 text-sm italic">Recommended daily dose</span> <span className="text-white font-bold">4 capsules (2-BD)</span></div>
-                <div className="flex justify-between items-center pt-3 border-t border-gray-800"><span className="text-gray-400 text-sm">Daily EPA total</span> <span className="text-[#D4AF37] font-bold">1.6 g</span></div>
-                <div className="flex justify-between items-center"><span className="text-gray-400 text-sm">Daily DHA total</span> <span className="text-[#D4AF37] font-bold">0.8 g</span></div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-400 text-sm italic">Recommended daily dose</span>{' '}
+                  <span className="text-white font-bold">4 capsules (2-BD)</span>
+                </div>
+                <div className="flex justify-between items-center pt-3 border-t border-gray-800">
+                  <span className="text-gray-400 text-sm">Daily EPA total</span>{' '}
+                  <span className="text-[#D4AF37] font-bold">1.6 g</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-400 text-sm">Daily DHA total</span>{' '}
+                  <span className="text-[#D4AF37] font-bold">0.8 g</span>
+                </div>
               </div>
             </div>
           </div>
@@ -79,7 +93,7 @@ const BrandSection = ({ onNext }) => {
         }
       `}</style>
     </div>
-  );
-};
+  )
+}
 
-export default BrandSection;
+export default BrandSection
