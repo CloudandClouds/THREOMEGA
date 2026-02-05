@@ -218,7 +218,7 @@ const AdminDashboard = () => {
           <>
             {/* Stats Cards */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-              <div className="bg-white rounded-xl shadow-sm p-6 border-l-4 border-blue-500">
+              <div className="bg-white rounded-xl shadow-sm p-6 ">
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-sm text-slate-600 font-semibold">Total Registrations</p>
@@ -228,7 +228,7 @@ const AdminDashboard = () => {
                 </div>
               </div>
 
-              <div className="bg-white rounded-xl shadow-sm p-6 border-l-4 border-green-500">
+              <div className="bg-white rounded-xl shadow-sm p-6 ">
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-sm text-slate-600 font-semibold">Today</p>
@@ -238,7 +238,7 @@ const AdminDashboard = () => {
                 </div>
               </div>
 
-              <div className="bg-white rounded-xl shadow-sm p-6 border-l-4 border-purple-500">
+              <div className="bg-white rounded-xl shadow-sm p-6 ">
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-sm text-slate-600 font-semibold">DM Nephro</p>
@@ -248,7 +248,7 @@ const AdminDashboard = () => {
                 </div>
               </div>
 
-              <div className="bg-white rounded-xl shadow-sm p-6 border-l-4 border-orange-500">
+              <div className="bg-white rounded-xl shadow-sm p-6 ">
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-sm text-slate-600 font-semibold">MD Nephro</p>
@@ -326,10 +326,10 @@ const AdminDashboard = () => {
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-slate-700">{reg.mobile}</td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-slate-700">{reg.city}</td>
                         <td className="px-6 py-4 whitespace-nowrap">
-                          <span className={`px-3 py-1 text-xs font-semibold rounded-full ${
-                            reg.qualification === 'dm-nephro' ? 'bg-purple-100 text-purple-800' :
-                            reg.qualification === 'md-nephro' ? 'bg-blue-100 text-blue-800' :
-                            reg.qualification === 'md-medicine' ? 'bg-green-100 text-green-800' :
+                          <span className={`px-3 py-1 text-xs font-semibold rounded-md ${
+                            reg.qualification === 'dm-nephro' ? 'bg-purple-100 text-gray-800' :
+                            reg.qualification === 'md-nephro' ? 'bg-blue-100 text-gray-800' :
+                            reg.qualification === 'md-medicine' ? 'bg-green-100 text-gray-800' :
                             'bg-slate-100 text-slate-800'
                           }`}>
                             {reg.qualification === 'dm-nephro' ? 'DM Nephro' :

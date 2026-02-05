@@ -78,7 +78,7 @@ const BrandSection = ({ onNext }) => {
           onClick={onNext}
           className="w-full bg-[#8B0000] hover:bg-[#A50000] text-white font-bold py-5 rounded-2xl transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center gap-2 shadow-lg hover:shadow-xl group"
         >
-          ENTER APPRECIATION DRAW
+          SUBMIT RESULTS & FINISH
           <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
         </button>
       </div>

@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Home/Navbar';
 import CallToActionAndFooter from '../components/Home/CallToActionAndFooter';
-import { User, Mail, Phone, Building2, Stethoscope, Send, CheckCircle2 } from 'lucide-react';
+import { User, Mail, Phone, MapPin, Heart, Send, CheckCircle2 } from 'lucide-react';
 
-const ForDoctorsPage = () => {
+const ForPatientsPage = () => {
     const [formData, setFormData] = useState({
         name: '',
-        specility: '',
+        age: '',
         email: '',
         mobile: '',
-        institution: '',
+        city: '',
         message: ''
     });
     const [submitted, setSubmitted] = useState(false);
@@ -17,7 +17,7 @@ const ForDoctorsPage = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         // Simulate submission
-        console.log('Doctor Registration:', formData);
+        console.log('Patient Registration:', formData);
         setSubmitted(true);
     };
 
@@ -30,30 +30,30 @@ const ForDoctorsPage = () => {
             
             <div className="relative pt-32 pb-20 px-6 overflow-hidden">
                 {/* Background Decorations */}
-                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#D4AF37]/5 rounded-full blur-[100px] -mr-64 -mt-64"></div>
-                <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#8B0000]/5 rounded-full blur-[100px] -ml-64 -mb-64"></div>
+                <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-[#8B0000]/5 rounded-full blur-[100px] -ml-64 -mt-64"></div>
+                <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-[#D4AF37]/5 rounded-full blur-[100px] -mr-64 -mb-64"></div>
 
                 <div className="max-w-7xl mx-auto relative z-10">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                         {/* Left Side: Content */}
                         <div className="animate-fade-in">
                             <div className="inline-flex items-center gap-2 mb-6">
-                                <div className="h-[1px] w-8 bg-[#D4AF37]"></div>
-                                <span className="text-[#D4AF37] font-bold tracking-widest text-xs uppercase">Physician Portal</span>
+                                <div className="h-[1px] w-8 bg-[#8B0000]"></div>
+                                <span className="text-[#8B0000] font-bold tracking-widest text-xs uppercase">Patient Wellness Center</span>
                             </div>
                             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent mb-8 leading-tight" style={{ fontFamily: 'serif' }}>
-                                Empowering Healthcare Professionals
+                                Your Path to Better Dialysis Care
                             </h1>
                             <p className="text-gray-600 text-lg mb-10 leading-relaxed max-w-xl">
-                                Access exclusive clinical resources, breakthrough research summaries, and evidence-based dosing guidelines tailored for nephrologists and medical specialists.
+                                Discover how pure, evidence-based Omega-3 support can improve your cardiovascular health and overall well-being during hemodialysis.
                             </p>
 
                             <div className="space-y-6">
                                 {[
-                                    { icon: <CheckCircle2 className="w-5 h-5 text-green-500" />, text: "Priority access to PISCES-HD clinical trial data" },
-                                    { icon: <CheckCircle2 className="w-5 h-5 text-green-500" />, text: "Dosing recommendations for hemodialysis patients" },
-                                    { icon: <CheckCircle2 className="w-5 h-5 text-green-500" />, text: "Direct channel for medical-scientific inquiries" },
-                                    { icon: <CheckCircle2 className="w-5 h-5 text-green-500" />, text: "Complimentary clinical samples on request" }
+                                    { icon: <Heart className="w-5 h-5 text-[#8B0000]" />, text: "Protect your heart health during dialysis" },
+                                    { icon: <Heart className="w-5 h-5 text-[#8B0000]" />, text: "Support for chronic inflammation management" },
+                                    { icon: <Heart className="w-5 h-5 text-[#8B0000]" />, text: "Educational resources on renal nutrition" },
+                                    { icon: <Heart className="w-5 h-5 text-[#8B0000]" />, text: "Direct support for product availability and guidance" }
                                 ].map((item, i) => (
                                     <div key={i} className="flex items-center gap-4 text-gray-700 font-medium">
                                         {item.icon}
@@ -69,23 +69,23 @@ const ForDoctorsPage = () => {
                             <div className="relative bg-white border-2 border-gray-100 rounded-[32px] p-10 shadow-2xl">
                                 {submitted ? (
                                     <div className="text-center py-20 animate-scale-in">
-                                        <div className="w-20 h-20 rounded-full bg-green-50 flex items-center justify-center mx-auto mb-8 border-2 border-green-500/20">
-                                            <CheckCircle2 className="w-10 h-10 text-green-500" />
+                                        <div className="w-20 h-20 rounded-full bg-[#8B0000]/5 flex items-center justify-center mx-auto mb-8 border-2 border-[#8B0000]/20">
+                                            <CheckCircle2 className="w-10 h-10 text-[#8B0000]" />
                                         </div>
-                                        <h3 className="text-3xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'serif' }}>Registration Received</h3>
-                                        <p className="text-gray-500">Thank you, Doctor. Our medical team will reach out to you within 24-48 hours with more information.</p>
+                                        <h3 className="text-3xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'serif' }}>Inquiry Sent Successfully</h3>
+                                        <p className="text-gray-500">Thank you for reaching out. A wellness consultant will contact you shortly to answer your questions.</p>
                                         <button 
                                             onClick={() => setSubmitted(false)}
-                                            className="mt-10 text-[#D4AF37] font-bold text-sm uppercase tracking-widest hover:underline"
+                                            className="mt-10 text-[#8B0000] font-bold text-sm uppercase tracking-widest hover:underline"
                                         >
-                                            Submit another request
+                                            Submit another inquiry
                                         </button>
                                     </div>
                                 ) : (
                                     <form onSubmit={handleSubmit} className="space-y-6">
                                         <div className="mb-10">
-                                            <h2 className="text-2xl font-bold text-gray-900 mb-2">Connect with Us</h2>
-                                            <p className="text-gray-500 text-sm">Please provide your details for professional registration.</p>
+                                            <h2 className="text-2xl font-bold text-gray-900 mb-2">Request Information</h2>
+                                            <p className="text-gray-500 text-sm">Fill out the form below and we'll help you start your journey.</p>
                                         </div>
 
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -93,7 +93,7 @@ const ForDoctorsPage = () => {
                                                 <label className={labelClasses}><User className="w-3.5 h-3.5" /> Full Name</label>
                                                 <input 
                                                     type="text" 
-                                                    placeholder="Dr. Christopher Smith"
+                                                    placeholder="John Doe"
                                                     value={formData.name}
                                                     onChange={e => setFormData({...formData, name: e.target.value})}
                                                     className={inputClasses}
@@ -101,23 +101,23 @@ const ForDoctorsPage = () => {
                                                 />
                                             </div>
                                             <div>
-                                                <label className={labelClasses}><Stethoscope className="w-3.5 h-3.5" /> Specialty</label>
+                                                <label className={labelClasses}><User className="w-3.5 h-3.5" /> Age</label>
                                                 <input 
-                                                    type="text" 
-                                                    placeholder="Nephrology"
-                                                    value={formData.specility}
-                                                    onChange={e => setFormData({...formData, specility: e.target.value})}
+                                                    type="number" 
+                                                    placeholder="45"
+                                                    value={formData.age}
+                                                    onChange={e => setFormData({...formData, age: e.target.value})}
                                                     className={inputClasses}
                                                     required 
                                                 />
                                             </div>
                                             <div>
-                                                <label className={labelClasses}><Building2 className="w-3.5 h-3.5" /> Institution</label>
+                                                <label className={labelClasses}><MapPin className="w-3.5 h-3.5" /> City</label>
                                                 <input 
                                                     type="text" 
-                                                    placeholder="General Hospital"
-                                                    value={formData.institution}
-                                                    onChange={e => setFormData({...formData, institution: e.target.value})}
+                                                    placeholder="Mumbai"
+                                                    value={formData.city}
+                                                    onChange={e => setFormData({...formData, city: e.target.value})}
                                                     className={inputClasses}
                                                     required 
                                                 />
@@ -126,7 +126,7 @@ const ForDoctorsPage = () => {
                                                 <label className={labelClasses}><Mail className="w-3.5 h-3.5" /> Email Address</label>
                                                 <input 
                                                     type="email" 
-                                                    placeholder="dr.smith@hospital.com"
+                                                    placeholder="john@example.com"
                                                     value={formData.email}
                                                     onChange={e => setFormData({...formData, email: e.target.value})}
                                                     className={inputClasses}
@@ -137,7 +137,7 @@ const ForDoctorsPage = () => {
                                                 <label className={labelClasses}><Phone className="w-3.5 h-3.5" /> Mobile Number</label>
                                                 <input 
                                                     type="tel" 
-                                                    placeholder="+1 (555) 000-0000"
+                                                    placeholder="+91"
                                                     value={formData.mobile}
                                                     onChange={e => setFormData({...formData, mobile: e.target.value})}
                                                     className={inputClasses}
@@ -145,10 +145,10 @@ const ForDoctorsPage = () => {
                                                 />
                                             </div>
                                             <div className="md:col-span-2">
-                                                <label className={labelClasses}>Message / Inquiry</label>
+                                                <label className={labelClasses}>How can we help you?</label>
                                                 <textarea 
                                                     rows="4"
-                                                    placeholder="I would like to receive more information about the PISCES-HD trial results..."
+                                                    placeholder="I would like to know about available centers or dosage..."
                                                     value={formData.message}
                                                     onChange={e => setFormData({...formData, message: e.target.value})}
                                                     className={inputClasses + " resize-none"}
@@ -160,8 +160,8 @@ const ForDoctorsPage = () => {
                                             type="submit"
                                             className="w-full bg-[#8B0000] hover:bg-[#A50000] text-white font-bold py-5 rounded-2xl transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center gap-3 shadow-lg hover:shadow-xl mt-4 group"
                                         >
-                                            REGISTER & CONNECT
-                                            <Send className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                                            SEND MY INQUIRY
+                                            <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                                         </button>
                                     </form>
                                 )}
@@ -189,4 +189,4 @@ const ForDoctorsPage = () => {
     );
 };
 
-export default ForDoctorsPage;
+export default ForPatientsPage;

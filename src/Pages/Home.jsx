@@ -11,6 +11,7 @@ import TestimonialsAndPricing from '../components/Home/TestimonialsAndPricing';
 import FAQ from '../components/Home/FAQ';
 import CallToActionAndFooter from '../components/Home/CallToActionAndFooter';
 import Scoreboard from '../components/Home/Scoreboard';
+import ProgramInfo from '../components/Home/ProgramInfo';
 
 
 class HomePage extends Component {
@@ -19,6 +20,7 @@ class HomePage extends Component {
       <div className="min-h-screen bg-white">
         <Navbar />
         <Banner />
+        <ProgramInfo />
         <Scoreboard />
         <StatsCards/>
         <PiscesTrial/>

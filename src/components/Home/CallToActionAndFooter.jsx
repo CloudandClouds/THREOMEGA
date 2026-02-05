@@ -171,7 +171,7 @@ const CallToActionAndFooter = () => {
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold mb-2">
               <span className="text-white">THREOMEGA™</span>
-              <span style={{ color: styles.gold }}> by PONOGCN</span>
+              <span style={{ color: styles.gold }}> by Ponoogun</span>
             </h3>
             <p className="text-sm italic text-white" style={{ opacity: 0.6 }}>
               Advancing Nephrology Care Through Innovation
@@ -278,7 +278,7 @@ const CallToActionAndFooter = () => {
           {/* Bottom Bar */}
           <div className="border-t py-6 text-center" style={{ borderColor: styles.red }}>
             <p className="text-white text-xs mb-2" style={{ opacity: 0.6 }}>
-              © 2025 Ponogcn™. All rights reserved
+              © 2026 Ponoogun™. All rights reserved
             </p>
             <p className="text-white text-xs mb-2" style={{ opacity: 0.5 }}>
               DISCLAIMER: This product is not intended to diagnose, treat, cure, or prevent any

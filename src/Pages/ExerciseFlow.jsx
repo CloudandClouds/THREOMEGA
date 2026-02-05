@@ -51,20 +51,23 @@ const ExerciseFlow = () => {
     }
   };
 
-  const handleRegistration = async (data) => {
+  const handleRegistration = (data) => {
+    setFormData(data);
+    setCurrentScreen(currentScreen + 1);
+  };
+
+  const handleFinalSubmit = async () => {
     try {
       const response = await axios.post(`${API_URL}/registrations`, {
-        ...data,
+        ...formData,
         sessionId,
         answers,
         completedAt: new Date()
       });
-
-      setFormData(data);
       setCurrentScreen(currentScreen + 1);
     } catch (error) {
-      console.error('Error submitting registration:', error);
-      alert('Error submitting registration. Please try again.');
+      console.error('Error submitting final data:', error);
+      alert('Error submitting results. Please try again.');
     }
   };
 
@@ -74,6 +77,8 @@ const ExerciseFlow = () => {
 
   const sections = [
     { type: 'landing', component: LandingSection },
+    { type: 'prizes', component: PrizesSection },
+    { type: 'registration', component: RegistrationSection },
     // Questions 1-5
     ...Array.from({ length: 5 }, (_, i) => ({
       type: 'question',
@@ -137,8 +142,6 @@ const ExerciseFlow = () => {
     })),
     { type: 'insight', component: InsightSection },
     { type: 'brand', component: BrandSection },
-    { type: 'prizes', component: PrizesSection },
-    { type: 'registration', component: RegistrationSection },
     { type: 'confirmation', component: ConfirmationSection }
   ];
 
@@ -164,6 +167,15 @@ const ExerciseFlow = () => {
         {...currentSection.questionData}
         answer={answers[currentSection.questionData.index]}
         onAnswer={(optionIndex) => handleAnswer(currentSection.questionData.index, optionIndex)}
+      />
+    );
+  }
+
+  if (currentSection.type === 'brand') {
+    return (
+      <Component
+        {...commonProps}
+        onNext={handleFinalSubmit}
       />
     );
   }

@@ -8,6 +8,8 @@ import ExerciseFlow from './Pages/ExerciseFlow';
 import AdminLogin from './Pages/AdminLogin';
 import ProtectedRoute from './components/ProtectedRoute';
 import AdminDashboard from './Pages/AdminDashboard';
+import ForDoctorsPage from './Pages/ForDoctorsPage';
+import ForPatientsPage from './Pages/ForPatientsPage';
 
 
 function App() {
@@ -16,6 +18,8 @@ function App() {
       <Routes>
          <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/doctors" element={<ForDoctorsPage />} />
+        <Route path="/patients" element={<ForPatientsPage />} />
         <Route path="/QRLanding" element={<QRLanding />} />
         <Route path="/exercise/:sessionId" element={<ExerciseFlow />} />
         <Route path="/login" element={<AdminLogin />} />

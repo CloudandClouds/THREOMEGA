@@ -1,4 +1,5 @@
 import { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 class Navbar extends Component {
   render() {
@@ -8,33 +9,35 @@ class Navbar extends Component {
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <h1 className="text-3xl font-bold tracking-wide">
-                <span className="text-[#C4973C]">THREOMEGA</span>
-                <span className="text-[#C4973C] align-super text-sm">™</span>
-                <span className="text-[#DC2626] ml-1">3Ω</span>
-              </h1>
+              <Link to="/">
+                <h1 className="text-3xl font-bold tracking-wide">
+                  <span className="text-[#C4973C]">THREOMEGA</span>
+                  <span className="text-[#C4973C] align-super text-sm">™</span>
+                  <span className="text-[#DC2626] ml-1">3Ω</span>
+                </h1>
+              </Link>
             </div>
 
             {/* Navigation Links */}
             <div className="hidden md:flex space-x-8">
-              <a
-                href="#home"
+              <Link
+                to="/"
                 className="text-gray-900 hover:text-[#C4973C] px-3 py-2 text-sm font-medium transition-colors"
               >
                 HOME
-              </a>
-              <a
-                href="#doctors"
+              </Link>
+              <Link
+                to="/doctors"
                 className="text-gray-900 hover:text-[#C4973C] px-3 py-2 text-sm font-medium transition-colors"
               >
                 FOR DOCTORS
-              </a>
-              <a
-                href="#patients"
+              </Link>
+              <Link
+                to="/patients"
                 className="text-gray-900 hover:text-[#C4973C] px-3 py-2 text-sm font-medium transition-colors"
               >
                 FOR PATIENTS
-              </a>
+              </Link>
               <a
                 href="#science"
                 className="text-gray-900 hover:text-[#C4973C] px-3 py-2 text-sm font-medium transition-colors"
@@ -77,20 +80,10 @@ class Navbar extends Component {
             </div>
 
             {/* Mobile menu button */}
-            <div className="md:hidden">
-              <button className="text-gray-700 hover:text-gray-900">
-                <svg
-                  className="h-6 w-6"
-                  fill="none"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-              </button>
+            <div className="md:hidden flex items-center gap-4">
+              <Link to="/" className="text-xs font-bold text-gray-900 border-b-2 border-transparent hover:border-[#C4973C]">HOME</Link>
+              <Link to="/doctors" className="text-xs font-bold text-gray-900 border-b-2 border-transparent hover:border-[#C4973C]">DOCTORS</Link>
+              <Link to="/patients" className="text-xs font-bold text-gray-900 border-b-2 border-transparent hover:border-[#C4973C]">PATIENTS</Link>
             </div>
           </div>
         </div>
