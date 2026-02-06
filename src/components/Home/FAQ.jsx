@@ -1,186 +1,134 @@
 import React, { useState } from 'react';
-import { ChevronDown, HelpCircle, FileText, Download } from 'lucide-react';
+import { ChevronDown, HelpCircle, FileText, Download, Bookmark, Plus, Minus } from 'lucide-react';
 
 const FAQ = () => {
-  const [openIndex, setOpenIndex] = useState(null);
+    const [openIndex, setOpenIndex] = useState(null);
 
-  const styles = {
-    primary: '#1297E4',
-    secondary: '#0F238C',
-    silver: '#C0C0C0',
-    gold: '#EAE136',
-    text: '#2D2D2D',
-    background: '#FFFFFF',
-    lightBg: '#F8F9FA',
-    red: '#C41E3A'
-  };
+    const faqs = [
+        {
+            question: 'Is a prescription required for ThreOmega™?',
+            answer: 'ThreOmega™ is formulated as a high-potency medical food/supplement and does not require a formal prescription. However, due to its clinical-strength formulation, we strongly advise consulting your nephrologist or dialysis team before initiation.'
+        },
+        {
+            question: 'What is the expected timeframe for clinical results?',
+            answer: 'Landmark clinical trials demonstrate significant cardiovascular risk reduction after 6 months of consistent adherence. Many patients report improvements in overall vitality and metabolic stability within the first 8-12 weeks.'
+        },
+        {
+            question: 'Are there any documented side effects?',
+            answer: 'ThreOmega™ is exceptionally well-tolerated. Rare reports of mild gastrointestinal effects (e.g., aftertaste) are typically mitigated by following the BD (twice daily) dosing protocol with meals.'
+        },
+        {
+            question: 'Can ThreOmega™ be used with anticoagulant therapy?',
+            answer: 'Omega-3 fatty acids possess mild naturally-occurring antiplatelet properties. Patients on blood-thinning medications should have their coagulation profiles monitored regularly by their healthcare provider.'
+        },
+        {
+            question: 'What is the recommended storage protocol?',
+            answer: 'Maintain in a cool, dry environment (below 25°C/77°F). Protect from direct UV exposure and ensure the airtight seal is maintained between uses to prevent oxidation of the delicate EPA/DHA molecules.'
+        },
+        {
+            question: 'Is this product suitable for vegetarian diets?',
+            answer: 'No. ThreOmega™ utilizes ultra-purify marine-sourced oils to achieve the specific EPA/DHA concentrations mandated by the FOCUS-HD protocol. It is encapsulated in pharmaceutical-grade bovine gelatin.'
+        }
+    ];
 
-  const faqs = [
-    {
-      question: 'Do I need a prescription?',
-      answer: 'ThreOmega™ is available without a prescription. However, we recommend consulting with your healthcare provider before starting any new supplement, especially if you are on dialysis or have existing medical conditions.'
-    },
-    {
-      question: 'When will I see results?',
-      answer: 'Clinical trials showed cardiovascular benefits after 6 months of consistent use. However, individual results may vary. Some patients report feeling better energy levels within the first few weeks of supplementation.'
-    },
-    {
-      question: 'Any side effects?',
-      answer: 'ThreOmega™ is generally well-tolerated. Some people may experience mild digestive discomfort, fishy aftertaste, or burping. Taking the capsules with food can help minimize these effects. Consult your doctor if you experience any unusual symptoms.'
-    },
-    {
-      question: 'Can I take with my medications?',
-      answer: 'Omega-3 supplements can interact with blood thinners and other medications. Always inform your doctor about all supplements you are taking. Your healthcare provider can advise on the best timing and dosage for your specific situation.'
-    },
-    {
-      question: 'What if I miss a dose?',
-      answer: 'If you miss a dose, take it as soon as you remember. If it\'s close to your next scheduled dose, skip the missed dose and continue with your regular schedule. Do not double up on doses to make up for a missed one.'
-    },
-    {
-      question: 'Is this vegetarian?',
-      answer: 'No, ThreOmega™ contains fish oil-derived EPA and DHA. It is not suitable for vegetarians or vegans. If you follow a plant-based diet, consult your healthcare provider about alternative omega-3 sources.'
-    },
-    {
-      question: 'How is this different from eating fish?',
-      answer: 'ThreOmega™ provides a concentrated, standardized dose of EPA and DHA (1600mg EPA + 800mg DHA daily) that matches the FOCUS trial protocol. This specific ratio and dosage would be difficult to achieve through diet alone, especially for dialysis patients with dietary restrictions.'
-    },
-    {
-      question: 'What about storage?',
-      answer: 'Store ThreOmega™ in a cool, dry place away from direct sunlight. Keep the bottle tightly closed when not in use. Do not refrigerate unless the label specifically instructs to do so. Keep out of reach of children.'
-    }
-  ];
+    const toggleFAQ = (index) => {
+        setOpenIndex(openIndex === index ? null : index);
+    };
 
-  const toggleFAQ = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
+    return (
+        <section className="bg-white">
+            {/* FAQ Accordion */}
+            <div className="py-24 px-6 bg-white relative overflow-hidden">
+                <div className="max-w-4xl mx-auto relative z-10">
+                    {/* Header */}
+                    <div className="text-center mb-20">
+                        <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-gray-50 border border-gray-100 mb-6 shadow-sm">
+                            <HelpCircle className="w-4 h-4 text-[#8B0000]" />
+                            <span className="text-gray-900 font-bold tracking-[0.2em] text-[10px] uppercase">Scientific Inquiries</span>
+                        </div>
+                        <h2 className="text-4xl md:text-6xl font-black text-gray-900 mb-6" style={{ fontFamily: 'serif' }}>
+                            Frequently <span className="text-[#D4AF37]">Asked</span>
+                        </h2>
+                    </div>
 
-  return (
-    <div>
-      {/* FAQ Section */}
-      <div style={{ backgroundColor: styles.lightBg, padding: '64px 0' }}>
-        <div style={{ marginLeft: '4%', marginRight: '4%' }}>
-          {/* Header */}
-          <div className="text-center mb-12">
-            <div className="flex items-center justify-center mb-4">
-              <HelpCircle className="w-8 h-8 mr-3" style={{ color: styles.red }} />
-              <h2 className="text-4xl font-bold" style={{ color: styles.text }}>
-                FREQUENTLY ASKED QUESTIONS
-              </h2>
-            </div>
-            <div 
-              className="w-24 h-1 mx-auto"
-              style={{ backgroundColor: styles.gold }}
-            ></div>
-          </div>
-
-          {/* FAQ List */}
-          <div className="max-w-4xl mx-auto space-y-4">
-            {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className="border-2 rounded-lg overflow-hidden"
-                style={{
-                  backgroundColor: styles.background,
-                  borderColor: styles.silver
-                }}
-              >
-                {/* Question */}
-                <button
-                  onClick={() => toggleFAQ(index)}
-                  className="w-full px-6 py-4 flex items-center justify-between hover:opacity-80 transition-opacity"
-                  style={{ backgroundColor: styles.background }}
-                >
-                  <div className="flex items-center">
-                    <span className="text-lg mr-3" style={{ color: styles.red }}>?</span>
-                    <span className="font-semibold text-left" style={{ color: styles.text }}>
-                      {faq.question}
-                    </span>
-                  </div>
-                  <ChevronDown
-                    className={`w-5 h-5 transition-transform ${openIndex === index ? 'rotate-180' : ''}`}
-                    style={{ color: styles.text }}
-                  />
-                </button>
-
-                {/* Answer */}
-                {openIndex === index && (
-                  <div 
-                    className="px-6 py-4 border-t"
-                    style={{ 
-                      backgroundColor: styles.lightBg,
-                      borderColor: styles.silver
-                    }}
-                  >
-                    <p style={{ color: styles.text, opacity: 0.8 }}>
-                      {faq.answer}
-                    </p>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Clinical Reference Section */}
-      <div style={{ backgroundColor: styles.background, padding: '64px 0', borderTop: `1px solid ${styles.silver}` }}>
-        <div style={{ marginLeft: '4%', marginRight: '4%' }}>
-          <div className="max-w-3xl mx-auto text-center">
-            {/* Icon */}
-            <div className="flex justify-center mb-6">
-              <div
-                className="w-16 h-16 rounded-full flex items-center justify-center"
-                style={{ backgroundColor: '#E8F5E9' }}
-              >
-                <FileText className="w-8 h-8" style={{ color: '#10B981' }} />
-              </div>
+                    {/* Accordion List */}
+                    <div className="space-y-4">
+                        {faqs.map((faq, index) => (
+                            <div 
+                                key={index} 
+                                className={`group rounded-[32px] border-2 transition-all duration-500 overflow-hidden ${
+                                    openIndex === index ? 'border-[#D4AF37] bg-[#FAF9F6]' : 'border-gray-100 bg-white hover:border-[#D4AF37]/30'
+                                }`}
+                            >
+                                <button
+                                    onClick={() => toggleFAQ(index)}
+                                    className="w-full px-8 py-8 flex items-center justify-between text-left"
+                                >
+                                    <span className="text-xl font-bold text-gray-900 pr-8 line-tight leading-tight">
+                                        {faq.question}
+                                    </span>
+                                    <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-500 ${
+                                        openIndex === index ? 'bg-[#D4AF37] text-white rotate-180' : 'bg-gray-50 text-gray-400 group-hover:bg-[#D4AF37]/10 group-hover:text-[#D4AF37]'
+                                    }`}>
+                                        <ChevronDown className="w-5 h-5" />
+                                    </div>
+                                </button>
+                                
+                                <div className={`transition-all duration-500 ease-in-out ${
+                                    openIndex === index ? 'max-h-[300px] opacity-100' : 'max-h-0 opacity-0 pointer-events-none'
+                                }`}>
+                                    <div className="px-8 pb-8 text-gray-500 text-lg leading-relaxed max-w-3xl">
+                                        {faq.answer}
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
             </div>
 
-            {/* Title */}
-            <h3 className="text-2xl font-bold mb-4" style={{ color: styles.text }}>
-              📚 CLINICAL REFERENCE
-            </h3>
+            {/* Clinical Reference Card */}
+            <div className="py-24 px-6 bg-gray-50">
+                <div className="max-w-5xl mx-auto">
+                    <div className="bg-white border-2 border-gray-100 rounded-[60px] p-10 md:p-20 relative overflow-hidden shadow-2xl">
+                        {/* Evidence Badge */}
+                        <div className="absolute top-0 right-0 p-12 opacity-[0.03]">
+                            <Bookmark className="w-64 h-64 text-gray-900" />
+                        </div>
 
-            {/* Description */}
-            <p className="text-base mb-2" style={{ color: styles.text, opacity: 0.8 }}>
-              U.S.C.T. (2024-01-15): Omega-3 fatty acid supplementation in US and<br />
-              Global 200-500ml supplementation and its role on Reducing Potentially life<br />
-              Threatening Events in CKD Patients
-            </p>
-            <p className="text-sm italic mb-8" style={{ color: styles.text, opacity: 0.6 }}>
-              N Engl J Med, April 7, 2021
-            </p>
-
-            {/* Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button
-                className="px-8 py-3 font-bold border-2 rounded-lg transition-opacity hover:opacity-90 flex items-center justify-center"
-                style={{
-                  backgroundColor: styles.background,
-                  borderColor: styles.gold,
-                  color: styles.text
-                }}
-              >
-                <Download className="w-5 h-5 mr-2" />
-                📄 READ FULL STUDY
-              </button>
-              <button
-                className="px-8 py-3 font-bold border-2 rounded-lg transition-opacity hover:opacity-90 flex items-center justify-center"
-                style={{
-                  backgroundColor: styles.background,
-                  borderColor: styles.gold,
-                  color: styles.text
-                }}
-              >
-                <Download className="w-5 h-5 mr-2" />
-                📥 DOWNLOAD PDF
-              </button>
+                        <div className="relative z-10 text-center md:text-left">
+                            <div className="flex flex-col md:flex-row gap-12 items-center">
+                                <div className="w-24 h-24 rounded-[32px] bg-[#8B0000]/5 flex items-center justify-center text-[#8B0000] flex-shrink-0">
+                                    <FileText className="w-10 h-10" />
+                                </div>
+                                <div className="flex-1">
+                                    <h3 className="text-xs font-black text-[#D4AF37] tracking-[0.3em] uppercase mb-4">Core Clinical Reference</h3>
+                                    <p className="text-2xl md:text-3xl font-bold text-gray-900 mb-6 leading-tight" style={{ fontFamily: 'serif' }}>
+                                        Omega-3 fatty acid supplementation and Cardiovascular Outcome Risk in CKD Patients
+                                    </p>
+                                    <div className="flex flex-wrap gap-4 text-sm font-bold text-gray-400 mb-10">
+                                        <span className="px-3 py-1 bg-gray-50 rounded-lg">NEJM, April 2021</span>
+                                        <span className="px-3 py-1 bg-gray-50 rounded-lg">FOCUS-HD Protocol</span>
+                                        <span className="px-3 py-1 bg-gray-50 rounded-lg">Global Study</span>
+                                    </div>
+                                    
+                                    <div className="flex flex-col sm:flex-row gap-6">
+                                        <button className="px-10 py-5 bg-gray-900 hover:bg-black text-white font-bold rounded-2xl transition-all shadow-xl hover:shadow-2xl flex items-center justify-center gap-3">
+                                            <Download className="w-5 h-5" />
+                                            FULL STUDY [PDF]
+                                        </button>
+                                        <button className="px-10 py-5 bg-white border-2 border-gray-100 hover:border-[#D4AF37] text-gray-900 font-bold rounded-2xl transition-all flex items-center justify-center gap-3">
+                                            VIEW CITATION
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+        </section>
+    );
 };
 
 export default FAQ;
