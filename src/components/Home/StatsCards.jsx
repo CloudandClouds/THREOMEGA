@@ -45,7 +45,7 @@ const StatsCards = () => {
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="group relative bg-white rounded-[32px] p-8 border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden"
+              className="group relative bg-white rounded-[15px] p-8 border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden"
             >
               {/* Animated Background Gradient */}
               <div className={`absolute inset-0 bg-gradient-to-br ${stat.color} opacity-0 group-hover:opacity-100 transition-opacity duration-700`}></div>

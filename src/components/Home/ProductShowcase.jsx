@@ -1,206 +1,115 @@
 import React from 'react';
-import { Pill, Coffee, Utensils, CheckCircle } from 'lucide-react';
+import { Pill, Coffee, Utensils, CheckCircle2, ShoppingCart, Info, Award } from 'lucide-react';
 
 const ProductShowcase = () => {
-  const styles = {
-    primary: '#1297E4',
-    secondary: '#0F238C',
-    silver: '#C0C0C0',
-    gold: '#EAE136',
-    text: '#2D2D2D',
-    background: '#FFFFFF',
-    lightBg: '#F8F9FA',
-    red: '#C41E3A'
-  };
-
-  return (
-    <div style={{ backgroundColor: styles.lightBg, padding: '64px 0' }}>
-      <div style={{ marginLeft: '4%', marginRight: '4%' }}>
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold mb-4" style={{ color: styles.text }}>
-            THREOMEGA™ <span style={{ color: styles.gold }}>3Ω</span>
-          </h1>
-          <p className="text-base italic" style={{ color: styles.text, opacity: 0.7 }}>
-            Omega-3 Supplementation for Hemodialysis Patients Formulated with Reference to<br />
-            Emerging Clinical Evidence
-          </p>
-        </div>
-
-        {/* Main Content Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
-          {/* Left Side - Product Image */}
-          <div>
-            <div 
-              className="border-2 rounded-lg p-8 text-center"
-              style={{
-                backgroundColor: styles.background,
-                borderColor: styles.silver
-              }}
-            >
-              <div className="relative">
-                <img
-                  src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&q=80"
-                  alt="OMEGA-3 Product"
-                  className="w-full h-auto rounded-lg mb-4"
-                  style={{ maxWidth: '400px', margin: '0 auto' }}
-                />
-                <button
-                  className="absolute bottom-8 left-1/2 transform -translate-x-1/2 px-6 py-2 font-semibold rounded-full"
-                  style={{
-                    backgroundColor: styles.text,
-                    color: styles.background
-                  }}
-                >
-                  Buy it right now
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Side - Product Details */}
-          <div className="space-y-6">
-            {/* Precision Formulation */}
-            <div 
-              className="border-2 rounded-lg p-6"
-              style={{
-                backgroundColor: styles.background,
-                borderColor: styles.silver
-              }}
-            >
-              <div className="flex items-center mb-4">
-                <Pill className="w-5 h-5 mr-2" style={{ color: styles.red }} />
-                <h3 className="text-lg font-bold" style={{ color: styles.red }}>
-                  PRECISION FORMULATION
-                </h3>
-              </div>
-              <div className="space-y-2">
-                <p className="font-semibold mb-3" style={{ color: styles.text }}>
-                  Each Capsule Contains
-                </p>
-                <div className="flex items-start">
-                  <div className="w-2 h-2 mt-2 mr-3 flex-shrink-0" style={{ backgroundColor: styles.primary }}></div>
-                  <span style={{ color: styles.text }}>EPA: 400 mg</span>
+    return (
+        <section className="py-24 px-6 bg-white overflow-hidden relative">
+            {/* Background Accents */}
+            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#D4AF37]/5 rounded-full blur-[100px] -mr-64 -mt-64"></div>
+            
+            <div className="max-w-7xl mx-auto relative z-10">
+                {/* Header */}
+                <div className="text-center mb-20">
+                    <h2 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-[#8B0000] via-[#D4AF37] to-[#8B0000] bg-clip-text text-transparent mb-8" style={{ fontFamily: 'serif' }}>
+                        ThreOmega™ <span className="text-gray-900">3Ω</span>
+                    </h2>
+                    <p className="text-gray-500 text-xl max-w-3xl mx-auto leading-relaxed italic">
+                        The definitive Omega-3 solution specifically engineered for the unique metabolic requirements of hemodialysis patients.
+                    </p>
                 </div>
-                <div className="flex items-start">
-                  <div className="w-2 h-2 mt-2 mr-3 flex-shrink-0" style={{ backgroundColor: styles.primary }}></div>
-                  <span style={{ color: styles.text }}>DHA: 200 mg</span>
-                </div>
-              </div>
-            </div>
 
-            {/* Evidence-Based Dosing */}
-            <div 
-              className="border-2 rounded-lg p-6"
-              style={{
-                backgroundColor: styles.background,
-                borderColor: styles.silver
-              }}
-            >
-              <div className="flex items-center mb-4">
-                <Utensils className="w-5 h-5 mr-2" style={{ color: styles.red }} />
-                <h3 className="text-lg font-bold" style={{ color: styles.red }}>
-                  EVIDENCE-BASED DOSING
-                </h3>
-              </div>
-              <div className="space-y-4">
-                <p className="font-semibold" style={{ color: styles.text }}>
-                  4 capsules daily (2 BD)
-                </p>
-                <div className="space-y-3">
-                  <div className="flex items-start">
-                    <div 
-                      className="w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0"
-                      style={{ backgroundColor: styles.gold }}
-                    >
-                      <Coffee className="w-4 h-4" style={{ color: styles.text }} />
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+                    {/* Left: Product Visual */}
+                    <div className="relative group">
+                        <div className="absolute -inset-10 bg-gradient-to-tr from-[#D4AF37]/10 to-[#8B0000]/10 rounded-full blur-[80px] opacity-50 group-hover:opacity-100 transition-opacity duration-700"></div>
+                        <div className="relative bg-[#FAF9F6] border-2 border-gray-100 rounded-[20px] p-12 shadow-2xl overflow-hidden group">
+                             {/* Floating Badges */}
+                             <div className="absolute top-3 left-3 bg-white/80 backdrop-blur-md border border-gray-100 px-4 py-2 rounded-full shadow-lg flex items-center gap-2">
+                                <Award className="w-4 h-4 text-[#D4AF37]" />
+                                <span className="text-[10px] font-bold uppercase tracking-widest text-gray-700">Clinical Formulation</span>
+                             </div>
+
+                             <img 
+                                src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&q=80" 
+                                alt="ThreOmega Supplement Bottle" 
+                                className="w-full h-auto rounded-3xl mix-blend-multiply transition-transform duration-700 group-hover:scale-105"
+                             />
+
+                             <div className="mt-8 flex justify-center">
+                                <button className="px-10 py-5 bg-gray-900 hover:bg-black text-white font-bold rounded-2xl transition-all shadow-xl hover:shadow-2xl flex items-center gap-3">
+                                    <ShoppingCart className="w-5 h-5" />
+                                    ACQUIRE NOW
+                                </button>
+                             </div>
+                        </div>
                     </div>
-                    <div>
-                      <p className="font-semibold" style={{ color: styles.text }}>Morning: 2 capsules with breakfast</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start">
-                    <div 
-                      className="w-8 h-8 rounded-full flex items-center justify-center mr-3 flex-shrink-0"
-                      style={{ backgroundColor: styles.red }}
-                    >
-                      <Utensils className="w-4 h-4 text-white" />
-                    </div>
-                    <div>
-                      <p className="font-semibold" style={{ color: styles.text }}>Evening: 2 capsules with dinner</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
 
-            {/* Total Daily Dose */}
-            <div 
-              className="border-2 rounded-lg p-6"
-              style={{
-                backgroundColor: styles.background,
-                borderColor: styles.silver
-              }}
-            >
-              <p className="font-semibold mb-3" style={{ color: styles.text }}>
-                Total Daily Dose:
-              </p>
-              <div className="space-y-2">
-                <div className="flex items-start">
-                  <div className="w-2 h-2 mt-2 mr-3 flex-shrink-0" style={{ backgroundColor: styles.primary }}></div>
-                  <span style={{ color: styles.text }}>EPA: 1.6 g/day</span>
-                </div>
-                <div className="flex items-start">
-                  <div className="w-2 h-2 mt-2 mr-3 flex-shrink-0" style={{ backgroundColor: styles.primary }}></div>
-                  <span style={{ color: styles.text }}>DHA: 0.8 g/day</span>
-                </div>
-              </div>
-            </div>
+                    {/* Right: Technical Specifications */}
+                    <div className="space-y-8">
+                        {/* Precision Content */}
+                        <div className="bg-white border-2 border-gray-100 rounded-[20px] p-10 hover:border-[#D4AF37]/30 transition-all duration-500 shadow-xl shadow-gray-100/50">
+                            <div className="flex items-center gap-4 mb-8">
+                                <div className="w-12 h-12 rounded-2xl bg-[#8B0000]/5 flex items-center justify-center text-[#8B0000]">
+                                    <Pill className="w-6 h-6" />
+                                </div>
+                                <h3 className="text-2xl font-bold text-gray-900">Precision Content</h3>
+                            </div>
+                            <div className="grid grid-cols-2 gap-8">
+                                <div className="space-y-1">
+                                    <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest leading-none mb-1">EPA CONTENT</p>
+                                    <p className="text-3xl font-black text-[#D4AF37]">400mg</p>
+                                    <p className="text-xs text-gray-500">Per individual capsule</p>
+                                </div>
+                                <div className="space-y-1">
+                                    <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest leading-none mb-1">DHA CONTENT</p>
+                                    <p className="text-3xl font-black text-[#8B0000]">200mg</p>
+                                    <p className="text-xs text-gray-500">Per individual capsule</p>
+                                </div>
+                            </div>
+                        </div>
 
-            {/* Trial Results Badge */}
-            <div 
-              className="border-2 rounded-lg p-4"
-              style={{
-                backgroundColor: '#E8F5E9',
-                borderColor: '#10B981'
-              }}
-            >
-              <div className="flex items-center">
-                <CheckCircle className="w-5 h-5 mr-2" style={{ color: '#10B981' }} />
-                <p className="font-semibold" style={{ color: styles.text }}>
-                  Dosing Aligned with FOCUS Trial Regimen
-                </p>
-              </div>
-            </div>
+                        {/* Evidence-Based Regimen */}
+                        <div className="bg-[#1a1a1a] rounded-[20px] p-10 text-white shadow-2xl relative overflow-hidden group">
+                            <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:scale-110 transition-transform duration-700">
+                                <Info className="w-32 h-32" />
+                            </div>
+                            <div className="flex items-center gap-4 mb-8 relative z-10">
+                                <div className="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center text-[#D4AF37]">
+                                    <Utensils className="w-6 h-6" />
+                                </div>
+                                <h3 className="text-2xl font-bold">Evidence Regimen</h3>
+                            </div>
+                            
+                            <div className="space-y-6 relative z-10">
+                                <div className="flex items-center gap-6 p-4 rounded-3xl bg-white/5 border border-white/10 transition-colors hover:bg-white/10">
+                                    <div className="w-10 h-10 rounded-xl bg-[#D4AF37] flex items-center justify-center text-black shadow-lg">
+                                        <Coffee className="w-5 h-5" />
+                                    </div>
+                                    <div>
+                                        <p className="font-bold">2 Capsules BD</p>
+                                        <p className="text-xs text-white/50">Morning with breakfast</p>
+                                    </div>
+                                </div>
+                                <div className="flex items-center gap-6 p-4 rounded-3xl bg-white/5 border border-white/10 transition-colors hover:bg-white/10">
+                                    <div className="w-10 h-10 rounded-xl bg-[#8B0000] flex items-center justify-center text-white shadow-lg">
+                                        <Utensils className="w-5 h-5" />
+                                    </div>
+                                    <div>
+                                        <p className="font-bold">2 Capsules BD</p>
+                                        <p className="text-xs text-white/50">Evening with dinner</p>
+                                    </div>
+                                </div>
+                            </div>
 
-            {/* Action Buttons */}
-            <div className="flex gap-4 pt-4">
-              <button
-                className="flex-1 px-6 py-3 font-bold border-2 rounded-lg transition-opacity hover:opacity-80"
-                style={{
-                  backgroundColor: styles.background,
-                  borderColor: styles.gold,
-                  color: styles.text
-                }}
-              >
-                VIEW PRICING
-              </button>
-              <button
-                className="flex-1 px-6 py-3 font-bold border-2 rounded-lg transition-opacity hover:opacity-90"
-                style={{
-                  backgroundColor: styles.red,
-                  borderColor: styles.red,
-                  color: styles.background
-                }}
-              >
-                ORDER NOW
-              </button>
+                            <p className="mt-8 text-[10px] uppercase tracking-[0.2em] font-bold text-[#D4AF37] flex items-center gap-2">
+                                <CheckCircle2 className="w-3 h-3" /> Total daily dosage: 1.6g EPA / 0.8g DHA
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+        </section>
+    );
 };
 
 export default ProductShowcase;
