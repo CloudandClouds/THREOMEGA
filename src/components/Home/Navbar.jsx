@@ -13,7 +13,7 @@ class Navbar extends Component {
                 <h1 className="text-3xl font-bold tracking-wide">
                   <span className="text-[#C4973C]">THREOMEGA</span>
                   <span className="text-[#C4973C] align-super text-sm">™</span>
-                  <span className="text-[#DC2626] ml-1">3Ω</span>
+                  <span className="text-[#DC2626] ml-1">3ω</span>
                 </h1>
               </Link>
             </div>
@@ -81,9 +81,24 @@ class Navbar extends Component {
 
             {/* Mobile menu button */}
             <div className="md:hidden flex items-center gap-4">
-              <Link to="/" className="text-xs font-bold text-gray-900 border-b-2 border-transparent hover:border-[#C4973C]">HOME</Link>
-              <Link to="/doctors" className="text-xs font-bold text-gray-900 border-b-2 border-transparent hover:border-[#C4973C]">DOCTORS</Link>
-              <Link to="/patients" className="text-xs font-bold text-gray-900 border-b-2 border-transparent hover:border-[#C4973C]">PATIENTS</Link>
+              <Link
+                to="/"
+                className="text-xs font-bold text-gray-900 border-b-2 border-transparent hover:border-[#C4973C]"
+              >
+                HOME
+              </Link>
+              <Link
+                to="/doctors"
+                className="text-xs font-bold text-gray-900 border-b-2 border-transparent hover:border-[#C4973C]"
+              >
+                DOCTORS
+              </Link>
+              <Link
+                to="/patients"
+                className="text-xs font-bold text-gray-900 border-b-2 border-transparent hover:border-[#C4973C]"
+              >
+                PATIENTS
+              </Link>
             </div>
           </div>
         </div>

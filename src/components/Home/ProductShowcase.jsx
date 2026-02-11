@@ -6,12 +6,12 @@ const ProductShowcase = () => {
         <section className="py-24 px-6 bg-white overflow-hidden relative">
             {/* Background Accents */}
             <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#D4AF37]/5 rounded-full blur-[100px] -mr-64 -mt-64"></div>
-            
+
             <div className="max-w-7xl mx-auto relative z-10">
                 {/* Header */}
                 <div className="text-center mb-20">
                     <h2 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-[#8B0000] via-[#D4AF37] to-[#8B0000] bg-clip-text text-transparent mb-8" style={{ fontFamily: 'serif' }}>
-                        ThreOmega™ <span className="text-gray-900">3Ω</span>
+                        ThreOmega™ <span className="text-gray-900">3ω</span>
                     </h2>
                     <p className="text-gray-500 text-xl max-w-3xl mx-auto leading-relaxed italic">
                         The definitive Omega-3 solution specifically engineered for the unique metabolic requirements of hemodialysis patients.
@@ -29,9 +29,9 @@ const ProductShowcase = () => {
                                 <span className="text-[10px] font-bold uppercase tracking-widest text-gray-700">Clinical Formulation</span>
                              </div>
 
-                             <img 
-                                src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&q=80" 
-                                alt="ThreOmega Supplement Bottle" 
+                             <img
+                                src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&q=80"
+                                alt="ThreOmega Supplement Bottle"
                                 className="w-full h-auto rounded-3xl mix-blend-multiply transition-transform duration-700 group-hover:scale-105"
                              />
 
@@ -79,7 +79,7 @@ const ProductShowcase = () => {
                                 </div>
                                 <h3 className="text-2xl font-bold">Evidence Regimen</h3>
                             </div>
-                            
+
                             <div className="space-y-6 relative z-10">
                                 <div className="flex items-center gap-6 p-4 rounded-3xl bg-white/5 border border-white/10 transition-colors hover:bg-white/10">
                                     <div className="w-10 h-10 rounded-xl bg-[#D4AF37] flex items-center justify-center text-black shadow-lg">

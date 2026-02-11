@@ -1,7 +1,7 @@
 import React from 'react';
-import { 
-    Facebook, Instagram, Linkedin, MessageCircle, Phone, Target, 
-    Twitter, Youtube, Mail, MapPin, ExternalLink, ShieldCheck, Heart 
+import {
+    Facebook, Instagram, Linkedin, MessageCircle, Phone, Target,
+    Twitter, Youtube, Mail, MapPin, ExternalLink, ShieldCheck, Heart
 } from 'lucide-react';
 
 const CallToActionAndFooter = () => {
@@ -43,19 +43,19 @@ const CallToActionAndFooter = () => {
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[20vw] font-black text-white/[0.03] whitespace-nowrap pointer-events-none select-none uppercase">
                     ThreOmega
                 </div>
-                
+
                 <div className="max-w-7xl mx-auto relative z-10">
                     <div className="max-w-4xl mx-auto text-center">
                         <div className="inline-flex items-center gap-3 px-6 py-2 rounded-full bg-white/10 border border-white/20 mb-10 backdrop-blur-md">
                             <ShieldCheck className="w-5 h-5 text-[#D4AF37]" />
                             <span className="text-white font-bold tracking-[0.2em] text-[10px] uppercase">Immediate Clinical Protection</span>
                         </div>
-                        
+
                         <h2 className="text-5xl md:text-8xl font-black text-white mb-10 leading-[0.9]" style={{ fontFamily: 'serif' }}>
                             Take Control of Your <br />
                             <span className="text-[#D4AF37]">Heart Health.</span>
                         </h2>
-                        
+
                         <p className="text-white/70 text-xl md:text-2xl mb-16 max-w-2xl mx-auto font-medium italic">
                             "Join 2,500+ patients who have integrated clinical-grade Omega-3 into their daily dialysis regimen."
                         </p>
@@ -85,16 +85,16 @@ const CallToActionAndFooter = () => {
                         {/* Company Info */}
                         <div className="md:col-span-4">
                             <h3 className="text-3xl font-black text-white mb-8">
-                                ThreOmega™ <span className="text-[#D4AF37]">3Ω</span>
+                                ThreOmega™ <span className="text-[#D4AF37]">3ω</span>
                             </h3>
                             <p className="text-white/40 text-lg leading-relaxed mb-10">
                                 Advancing nephrology care through evidence-informed supplementation for the global hemodialysis community.
                             </p>
                             <div className="flex gap-4">
                                 {socialLinks.map((social, i) => (
-                                    <a 
-                                        key={i} 
-                                        href={social.href} 
+                                    <a
+                                        key={i}
+                                        href={social.href}
                                         className={`w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-white/60 transition-all ${social.bg} hover:text-white hover:scale-110`}
                                     >
                                         <social.icon className="w-5 h-5" />
@@ -158,7 +158,7 @@ const CallToActionAndFooter = () => {
                                 </span>
                             </div>
                         </div>
-                        
+
                         <div className="flex items-center gap-3 px-4 py-2 bg-white/5 rounded-xl border border-white/10">
                             <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
                             <span className="text-[10px] font-black text-white/40 tracking-widest uppercase">System Protocol Active</span>
