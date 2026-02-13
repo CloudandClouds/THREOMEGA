@@ -69,8 +69,8 @@ const TestimonialsAndPricing = () => {
 
   return (
     <section className="bg-white">
-      {/* Voices of Recovery - Compact Version */}
-      <div className="py-20 px-6 bg-[#0F0F0F] relative overflow-hidden">
+      {/* Voices of Recovery */}
+      <div className="py-20 bg-[#0F0F0F] relative overflow-hidden" style={{ padding: '80px 5%' }}>
         <div className="absolute top-0 left-0 w-full h-full opacity-10">
           <div className="absolute top-[-10%] left-[-10%] w-full h-full bg-[#8B0000] rounded-full blur-[150px]"></div>
         </div>
@@ -79,7 +79,10 @@ const TestimonialsAndPricing = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left: Compact Header */}
             <div className="lg:col-span-5">
-              <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-6">
+              <div
+                className="inline-flex items-center gap-3 px-4 py-2 bg-white/5 border border-white/10 mb-6"
+                style={{ borderRadius: '20px' }}
+              >
                 <UserCheck className="w-4 h-4 text-[#D4AF37]" />
                 <span className="text-white/70 font-black tracking-[0.2em] text-[10px] uppercase">
                   Clinical Outcomes
@@ -97,18 +100,20 @@ const TestimonialsAndPricing = () => {
               </p>
             </div>
 
-            {/* Right: Focused Testimonials */}
+            {/* Right: Testimonials */}
             <div className="lg:col-span-7 flex flex-col gap-4">
               {testimonials.map((t, i) => (
                 <div
                   key={i}
-                  className="group relative bg-white/5 border border-white/10 rounded-[40px] p-8 overflow-hidden transition-all duration-500 hover:bg-white/10"
+                  className="group relative bg-white/5 border border-white/10 p-8 overflow-hidden transition-all duration-500 hover:bg-white/10"
+                  style={{ borderRadius: '20px' }}
                 >
                   <div className="flex flex-col md:flex-row gap-6 items-center md:items-start text-center md:text-left">
                     <img
                       src={t.image}
                       alt={t.name}
-                      className="w-20 h-20 rounded-2xl object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                      className="w-20 h-20 object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                      style={{ borderRadius: '20px' }}
                     />
                     <div className="flex-grow">
                       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
@@ -118,7 +123,10 @@ const TestimonialsAndPricing = () => {
                             {t.history}
                           </p>
                         </div>
-                        <div className="flex items-center gap-2 bg-white/5 px-4 py-2 rounded-xl border border-white/10">
+                        <div
+                          className="flex items-center gap-2 bg-white/5 px-4 py-2 border border-white/10"
+                          style={{ borderRadius: '20px' }}
+                        >
                           <TrendingDown className="w-4 h-4 text-[#8B0000]" />
                           <span className="text-white font-black text-sm">{t.outcome}</span>
                         </div>
@@ -134,85 +142,93 @@ const TestimonialsAndPricing = () => {
       </div>
 
       {/* Pricing */}
-      <div className="py-32 px-6 bg-white">
+      <div className="bg-white" style={{ padding: '80px 5%' }}>
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-24">
+          <div className="text-center mb-16">
             <h2
-              className="text-5xl md:text-7xl font-black text-gray-900 mb-8 leading-[0.9]"
+              className="text-5xl md:text-6xl font-black text-gray-900 mb-4 leading-tight"
               style={{ fontFamily: 'serif' }}
             >
               Clinical <span className="text-[#8B0000]">Protocols</span>.
             </h2>
-            <p className="text-gray-500 text-xl max-w-2xl mx-auto leading-relaxed">
+            <p className="text-gray-400 text-base max-w-xl mx-auto leading-relaxed">
               Select the evidence-based regimen that aligns with your clinical objectives and
               cardiovascular health goals.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {packages.map((pkg) => (
               <div
                 key={pkg.id}
-                className={`relative group rounded-[60px] p-12 lg:p-16 transition-all duration-700 bg-white border-2 hover:shadow-[0_40px_100px_rgba(0,0,0,0.1)] ${
-                  pkg.popular
-                    ? 'border-[#8B0000] scale-105 z-10'
-                    : 'border-gray-50 hover:border-[#D4AF37]/30'
+                className={`relative group bg-white border-2 transition-all duration-500 hover:shadow-[0_20px_60px_rgba(0,0,0,0.08)] ${
+                  pkg.popular ? 'border-[#8B0000]' : 'border-gray-100 hover:border-[#D4AF37]/40'
                 }`}
+                style={{ borderRadius: '20px', padding: '36px' }}
               >
                 {pkg.popular && (
-                  <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-[#8B0000] text-white px-8 py-3 rounded-full text-[10px] font-black tracking-widest uppercase shadow-2xl">
+                  <div
+                    className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#8B0000] text-white px-6 py-2 text-[10px] font-black tracking-widest uppercase shadow-lg"
+                    style={{ borderRadius: '20px' }}
+                  >
                     Physician's Choice
                   </div>
                 )}
 
-                <div className="mb-16">
-                  <h3 className="text-3xl font-black text-gray-900 mb-4">{pkg.name}</h3>
-                  <div className="flex items-center gap-3">
-                    <span className="text-xs font-black text-gray-400 uppercase tracking-[0.2em]">
+                {/* Header */}
+                <div className="mb-8">
+                  <h3 className="text-xl font-black text-gray-900 mb-2">{pkg.name}</h3>
+                  <div className="flex items-center gap-3 flex-wrap">
+                    <span className="text-xs font-bold text-gray-400 uppercase tracking-[0.2em]">
                       {pkg.duration}
                     </span>
                     {pkg.savings && (
-                      <span className="px-4 py-1.5 bg-[#8B0000]/5 text-[#8B0000] text-[10px] font-black rounded-lg uppercase tracking-widest border border-[#8B0000]/10">
+                      <span
+                        className="px-3 py-1 bg-[#8B0000]/5 text-[#8B0000] text-[10px] font-black uppercase tracking-widest border border-[#8B0000]/10"
+                        style={{ borderRadius: '20px' }}
+                      >
                         {pkg.savings}
                       </span>
                     )}
                   </div>
                 </div>
 
-                <div className="mb-16 flex items-baseline gap-2">
-                  <span className="text-gray-400 text-3xl font-bold">₹</span>
-                  <span className="text-7xl lg:text-8xl font-black text-gray-900 tracking-tighter leading-none">
+                {/* Price */}
+                <div className="mb-8 flex items-baseline gap-1">
+                  <span className="text-gray-400 text-xl font-bold">₹</span>
+                  <span className="text-6xl font-black text-gray-900 tracking-tighter leading-none">
                     {pkg.price}
                   </span>
+                  {pkg.originalPrice && (
+                    <span className="text-gray-300 text-base font-medium line-through ml-1">
+                      ₹{pkg.originalPrice}
+                    </span>
+                  )}
                 </div>
 
-                <ul className="space-y-6 mb-16">
-                  <li className="flex items-center gap-4 text-gray-500 font-medium">
-                    <div className="w-6 h-6 rounded-full bg-green-50 flex items-center justify-center flex-shrink-0">
-                      <CheckCircle2 className="w-4 h-4 text-green-500" />
-                    </div>
+                {/* Features */}
+                <ul className="space-y-3 mb-8">
+                  <li className="flex items-center gap-3 text-gray-500 text-sm font-medium">
+                    <CheckCircle2 className="w-4 h-4 text-green-500 flex-shrink-0" />
                     {pkg.capsules}
                   </li>
-                  <li className="flex items-center gap-4 text-gray-500 font-medium">
-                    <div className="w-6 h-6 rounded-full bg-green-50 flex items-center justify-center flex-shrink-0">
-                      <CheckCircle2 className="w-4 h-4 text-green-500" />
-                    </div>
+                  <li className="flex items-center gap-3 text-gray-500 text-sm font-medium">
+                    <CheckCircle2 className="w-4 h-4 text-green-500 flex-shrink-0" />
                     Clinical EPA:DHA Ratio
                   </li>
-                  <li className="flex items-center gap-4 text-gray-500 font-medium">
-                    <div className="w-6 h-6 rounded-full bg-green-50 flex items-center justify-center flex-shrink-0">
-                      <CheckCircle2 className="w-4 h-4 text-green-500" />
-                    </div>
+                  <li className="flex items-center gap-3 text-gray-500 text-sm font-medium">
+                    <CheckCircle2 className="w-4 h-4 text-green-500 flex-shrink-0" />
                     GMP Certification
                   </li>
                 </ul>
 
                 <button
-                  className={`w-full py-6 rounded-3xl font-black transition-all text-sm uppercase tracking-widest ${
+                  className={`w-full py-4 font-black transition-all text-sm uppercase tracking-widest ${
                     pkg.popular
-                      ? 'bg-[#8B0000] text-white hover:bg-black shadow-2xl hover:-translate-y-1'
-                      : 'bg-white border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white shadow-xl hover:-translate-y-1'
+                      ? 'bg-[#8B0000] text-white hover:bg-black'
+                      : 'bg-white border-2 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white'
                   }`}
+                  style={{ borderRadius: '20px' }}
                 >
                   ACTIVATE PROTOCOL
                 </button>
@@ -221,39 +237,38 @@ const TestimonialsAndPricing = () => {
           </div>
 
           {/* Trust Indicators */}
-          <div className="mt-32 grid grid-cols-2 lg:grid-cols-4 gap-12 pt-24 border-t border-gray-100">
-            <div className="flex flex-col items-center gap-6 text-center group">
-              <div className="w-16 h-16 rounded-[24px] bg-gray-50 flex items-center justify-center text-gray-400 group-hover:text-[#D4AF37] group-hover:bg-[#D4AF37]/5 transition-all duration-500 group-hover:scale-110">
-                <Truck className="w-8 h-8" />
+          <div
+            className="mt-20 grid grid-cols-2 lg:grid-cols-4 gap-8 pt-16 border-t border-gray-100"
+          >
+            {[
+              { icon: <Truck className="w-6 h-6" />, label: 'Priority Logistics', color: '#D4AF37' },
+              { icon: <ShieldCheck className="w-6 h-6" />, label: 'Secure Protocol', color: '#8B0000' },
+              { icon: <Package className="w-6 h-6" />, label: 'Direct Procurement', color: '#D4AF37' },
+              { icon: <Headphones className="w-6 h-6" />, label: 'Adherence Support', color: '#8B0000' },
+            ].map((item, i) => (
+              <div key={i} className="flex flex-col items-center gap-4 text-center group">
+                <div
+                  className="w-14 h-14 bg-gray-50 flex items-center justify-center text-gray-400 transition-all duration-500 group-hover:scale-110"
+                  style={{
+                    borderRadius: '20px',
+                    ['--hover-color']: item.color,
+                  }}
+                  onMouseEnter={e => {
+                    e.currentTarget.style.color = item.color
+                    e.currentTarget.style.background = item.color + '12'
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.color = ''
+                    e.currentTarget.style.background = ''
+                  }}
+                >
+                  {item.icon}
+                </div>
+                <span className="text-sm font-black uppercase tracking-[0.2em] text-gray-800 leading-snug">
+                  {item.label}
+                </span>
               </div>
-              <span className="text-[11px] font-black uppercase tracking-[0.3em] text-gray-900">
-                Priority Logistics
-              </span>
-            </div>
-            <div className="flex flex-col items-center gap-6 text-center group">
-              <div className="w-16 h-16 rounded-[24px] bg-gray-50 flex items-center justify-center text-gray-400 group-hover:text-[#8B0000] group-hover:bg-[#8B0000]/5 transition-all duration-500 group-hover:scale-110">
-                <ShieldCheck className="w-8 h-8" />
-              </div>
-              <span className="text-[11px] font-black uppercase tracking-[0.3em] text-gray-900">
-                Secure Protocol
-              </span>
-            </div>
-            <div className="flex flex-col items-center gap-6 text-center group">
-              <div className="w-16 h-16 rounded-[24px] bg-gray-50 flex items-center justify-center text-gray-400 group-hover:text-[#D4AF37] group-hover:bg-[#D4AF37]/5 transition-all duration-500 group-hover:scale-110">
-                <Package className="w-8 h-8" />
-              </div>
-              <span className="text-[11px] font-black uppercase tracking-[0.3em] text-gray-900">
-                Direct Procurement
-              </span>
-            </div>
-            <div className="flex flex-col items-center gap-6 text-center group">
-              <div className="w-16 h-16 rounded-[24px] bg-gray-50 flex items-center justify-center text-gray-400 group-hover:text-[#8B0000] group-hover:bg-[#8B0000]/5 transition-all duration-500 group-hover:scale-110">
-                <Headphones className="w-8 h-8" />
-              </div>
-              <span className="text-[11px] font-black uppercase tracking-[0.3em] text-gray-900">
-                Adherence Support
-              </span>
-            </div>
+            ))}
           </div>
         </div>
       </div>

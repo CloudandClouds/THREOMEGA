@@ -9,6 +9,8 @@ import BrandSection from '../components/sections/BrandSection';
 import PrizesSection from '../components/sections/PrizesSection';
 import RegistrationSection from '../components/sections/RegistrationSection';
 import ConfirmationSection from '../components/sections/ConfirmationSection';
+import TermsAndConditionsSection from '../components/sections/TermsAndConditionsSection';
+import InstructionSection from '../components/sections/InstructionSection';
 import { API_URL } from '../utils/url'
 
 const ExerciseFlow = () => {
@@ -18,6 +20,7 @@ const ExerciseFlow = () => {
   const [answers, setAnswers] = useState({});
   const [formData, setFormData] = useState({});
   const [sessionData, setSessionData] = useState(null);
+  const [showSuccess, setShowSuccess] = useState(false);
 
   useEffect(() => {
     // Create session on mount
@@ -53,7 +56,11 @@ const ExerciseFlow = () => {
 
   const handleRegistration = (data) => {
     setFormData(data);
-    setCurrentScreen(currentScreen + 1);
+    setShowSuccess(true);
+    setTimeout(() => {
+      setShowSuccess(false);
+      setCurrentScreen(currentScreen + 1);
+    }, 2000);
   };
 
   const handleFinalSubmit = async () => {
@@ -77,8 +84,8 @@ const ExerciseFlow = () => {
 
   const sections = [
     { type: 'landing', component: LandingSection },
-    { type: 'prizes', component: PrizesSection },
-    { type: 'registration', component: RegistrationSection },
+    { type: 'terms', component: TermsAndConditionsSection },
+    { type: 'instructions', component: InstructionSection },
     // Questions 1-5
     ...Array.from({ length: 5 }, (_, i) => ({
       type: 'question',
@@ -141,6 +148,8 @@ const ExerciseFlow = () => {
       }
     })),
     { type: 'insight', component: InsightSection },
+    { type: 'prizes', component: PrizesSection },
+    { type: 'registration', component: RegistrationSection },
     { type: 'brand', component: BrandSection },
     { type: 'confirmation', component: ConfirmationSection }
   ];
@@ -201,7 +210,47 @@ const ExerciseFlow = () => {
     );
   }
 
-  return <Component {...commonProps} />;
-};
+   return (
+     <div className="relative">
+       <Component {...commonProps} />
+       
+       {showSuccess && (
+         <div className="fixed inset-0 z-[100] flex items-center justify-center p-6 transition-all duration-500">
+           {/* Backdrop blur effect */}
+           <div className="absolute inset-0 bg-white/40 backdrop-blur-sm animate-fade-in-fast"></div>
+           
+           <div className="relative bg-white border-2 border-[#D4AF37] rounded-[2rem] p-10 shadow-[0_20px_50px_rgba(212,175,55,0.15)] flex flex-col items-center gap-6 animate-scale-in max-w-sm w-full">
+             <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#D4AF37]/20 to-[#D4AF37]/5 flex items-center justify-center border-2 border-[#D4AF37]/30 shadow-inner">
+               <svg className="w-10 h-10 text-[#D4AF37]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+               </svg>
+             </div>
+             <div className="text-center">
+               <h3 className="text-2xl font-bold text-gray-900 mb-2" style={{fontFamily: 'serif'}}>Registration Successful</h3>
+               <p className="text-gray-500 text-sm italic leading-relaxed">Thank you for your clinical participation. Moving to the final phase...</p>
+             </div>
+           </div>
+         </div>
+       )}
+
+       <style>{`
+         @keyframes fade-in-fast {
+           from { opacity: 0; }
+           to { opacity: 1; }
+         }
+         @keyframes scale-in {
+           from { opacity: 0; transform: scale(0.9); }
+           to { opacity: 1; transform: scale(1); }
+         }
+         .animate-fade-in-fast {
+           animation: fade-in-fast 0.2s ease-out forwards;
+         }
+         .animate-scale-in {
+           animation: scale-in 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+         }
+       `}</style>
+     </div>
+   );
+ };
 
 export default ExerciseFlow;

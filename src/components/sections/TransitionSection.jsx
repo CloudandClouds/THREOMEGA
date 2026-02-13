@@ -43,7 +43,7 @@ const TransitionSection = ({ onNext, onSkip }) => {
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </button>
           <button
-            onClick={() => onSkip(11)}
+            onClick={() => onSkip(12)}
             className="w-full bg-transparent hover:bg-gray-50 text-gray-600 hover:text-gray-900 font-semibold py-4 rounded-xl transition-all duration-300 border-2 border-gray-200 hover:border-gray-300"
           >
             SKIP →
