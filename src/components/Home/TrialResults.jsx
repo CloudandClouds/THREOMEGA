@@ -38,7 +38,7 @@ const TrialResults = () => {
     ];
 
     return (
-        <section className="py-24 px-6 bg-gray-50/50">
+        <section className="py-10  bg-gray-50/50 " style={{ paddingLeft: '5%', paddingRight: '5%' }}>
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
                 <div className="text-center mb-20">
