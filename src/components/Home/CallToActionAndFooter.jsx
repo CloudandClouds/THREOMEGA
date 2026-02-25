@@ -41,7 +41,7 @@ const CallToActionAndFooter = () => {
             <div className="relative py-32 px-6 bg-[#8B0000] overflow-hidden">
                 {/* Background Text Accent */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[20vw] font-black text-white/[0.03] whitespace-nowrap pointer-events-none select-none uppercase">
-                    ThreOmega
+                    ThreOmega - CV
                 </div>
 
                 <div className="max-w-7xl mx-auto relative z-10">
@@ -85,7 +85,7 @@ const CallToActionAndFooter = () => {
                         {/* Company Info */}
                         <div className="md:col-span-4">
                             <h3 className="text-3xl font-black text-white mb-8">
-                                ThreOmega™ <span className="text-[#D4AF37]">3ω</span>
+                                ThreOmega™ - CV<span className="text-[#D4AF37]">3ω</span>
                             </h3>
                             <p className="text-white/40 text-lg leading-relaxed mb-10">
                                 Advancing nephrology care through evidence-informed supplementation for the global hemodialysis community.
@@ -168,7 +168,7 @@ const CallToActionAndFooter = () => {
                     {/* Final Disclaimer */}
                     <div className="mt-12 text-center max-w-4xl mx-auto">
                         <p className="text-[10px] text-white/10 font-bold leading-relaxed uppercase tracking-tighter">
-                            DISCLAIMER: THREOMEGA™ IS A DIETARY SUPPLEMENT INTENDED TO PROVIDE MEDICAL NUTRITIONAL SUPPORT. IT IS NOT INTENDED TO DIAGNOSE, TREAT, CURE, OR PREVENT ANY DISEASE. ALWAYS CONSULT YOUR NEPHROLOGIST BEFORE MODIFYING YOUR CLINICAL REGIMEN. RESULTS OF THE PISCES-HD TRIAL REPRESENT GENERAL PATIENT COHORTS AND INDIVIDUAL OUTCOMES MAY VARY.
+                            DISCLAIMER: THREOMEGA™ - CV IS A DIETARY SUPPLEMENT INTENDED TO PROVIDE MEDICAL NUTRITIONAL SUPPORT. IT IS NOT INTENDED TO DIAGNOSE, TREAT, CURE, OR PREVENT ANY DISEASE. ALWAYS CONSULT YOUR NEPHROLOGIST BEFORE MODIFYING YOUR CLINICAL REGIMEN. RESULTS OF THE PISCES-HD TRIAL REPRESENT GENERAL PATIENT COHORTS AND INDIVIDUAL OUTCOMES MAY VARY.
                         </p>
                     </div>
                 </div>

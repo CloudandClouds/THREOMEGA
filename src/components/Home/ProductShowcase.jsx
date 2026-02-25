@@ -15,7 +15,7 @@ const ProductShowcase = () => {
               style={{ fontFamily: 'serif' }}
             >
               ThreOmega<span className="text-2xl align-super text-sm ml-1 text-gray-400">™</span>{' '}
-              <span className="text-gray-900">3ω</span>
+              <span className="text-gray-900">3ω - CV</span>
             </h2>
             <p className="text-gray-500 text-xl max-w-3xl mx-auto leading-relaxed italic">
               The definitive Omega-3 solution specifically engineered for the unique metabolic
@@ -38,7 +38,7 @@ const ProductShowcase = () => {
 
                 <img
                   src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&q=80"
-                  alt="ThreOmega Supplement Bottle"
+                  alt="ThreOmega - CV Supplement Bottle"
                   className="w-full h-auto rounded-3xl mix-blend-multiply transition-transform duration-700 group-hover:scale-105"
                 />
 

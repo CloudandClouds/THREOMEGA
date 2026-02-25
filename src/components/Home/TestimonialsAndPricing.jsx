@@ -17,7 +17,7 @@ const TestimonialsAndPricing = () => {
       history: '2 Years on Dialysis',
       outcome: '43% LDL Reduction',
       quote:
-        "The peace of mind I've gained since starting ThreOmega™ is invaluable. My energy levels have stabilized, and my medical team noted significant improvements in my CV markers.",
+        "The peace of mind I've gained since starting ThreOmega™ - CV is invaluable. My energy levels have stabilized, and my medical team noted significant improvements in my CV markers.",
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80',
     },
     {
@@ -27,7 +27,7 @@ const TestimonialsAndPricing = () => {
       history: 'Nephrologist Review',
       outcome: 'Clinical Adherence',
       quote:
-        'The ThreOmega protocol aligns perfectly with the PISCES-HD findings. It provides the precise EPA/DHA ratio required for dialysis-specific cardiac protection.',
+        'The ThreOmega - CV protocol aligns perfectly with the PISCES-HD findings. It provides the precise EPA/DHA ratio required for dialysis-specific cardiac protection.',
       image: 'https://images.unsplash.com/photo-1559839734-2b71f153a827?w=400&q=80',
     },
   ]
