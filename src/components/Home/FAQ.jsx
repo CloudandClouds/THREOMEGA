@@ -6,7 +6,7 @@ const FAQ = () => {
 
     const faqs = [
         {
-            question: 'Is a prescription required for ThreOmega™?',
+            question: 'Is a prescription required for ThreOmega™ - CV ?',
             answer: 'ThreOmega™ is formulated as a high-potency medical food/supplement and does not require a formal prescription. However, due to its clinical-strength formulation, we strongly advise consulting your nephrologist or dialysis team before initiation.'
         },
         {
