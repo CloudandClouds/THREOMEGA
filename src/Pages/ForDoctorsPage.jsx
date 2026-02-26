@@ -40,7 +40,7 @@ const ForDoctorsPage = () => {
                         Evidence-Based Omega-3 Therapy for Your Dialysis Patients
                     </h1>
                     <p className="text-gray-600 text-xl md:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed">
-                        Access clinical trial data, dosing protocols, and professional resources for <span className="font-bold text-[#8B0000]">Theromega - CV™</span>
+                        Access clinical trial data, dosing protocols, and professional resources for <span className="font-bold text-[#8B0000]">TheromegaCV™</span>
                     </p>
 
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-5xl mx-auto mt-16">

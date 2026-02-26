@@ -97,7 +97,10 @@ const CallToActionAndFooter = () => {
               {/* Company Info */}
               <div className="md:col-span-4">
                 <h3 className="text-3xl font-black text-white mb-8">
-                  ThreOmega - CV™<span className="text-[#D4AF37]">3ω</span>
+                  <span className="text-[#C4973C]">ThreOmega</span>
+                  <span className="text-[#DC2626] ml-1">CV</span>
+                  <span className="text-[#C4973C] align-top text-sm">™</span>{' '}
+                  <span className="text-[#3e26dc] ml-1">3ω</span>
                 </h3>
                 <p className="text-white/40 text-lg leading-relaxed mb-10">
                   Advancing nephrology care through evidence-informed supplementation for the global

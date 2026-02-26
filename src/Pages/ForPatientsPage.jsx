@@ -51,7 +51,7 @@ const ForPatientsPage = () => {
             </h1>
             <p className="text-gray-600 text-xl md:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed">
               Reduce cardiovascular risk in dialysis patients with{' '}
-              <span className="font-bold text-[#8B0000]">Theromega - CV™</span>
+              <span className="font-bold text-[#8B0000]">TheromegaCV™</span>
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mt-16">
@@ -206,7 +206,7 @@ const ForPatientsPage = () => {
                 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-[#D4AF37] via-[#B8860B] to-[#8B7500] bg-clip-text text-transparent mb-6"
                 style={{ fontFamily: 'serif' }}
               >
-                How To Take Theromega - CV™
+                How To Take TheromegaCV™
               </h2>
             </div>
 
