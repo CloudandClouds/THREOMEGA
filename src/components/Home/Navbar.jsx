@@ -11,10 +11,10 @@ class Navbar extends Component {
             <div className="flex-shrink-0">
               <Link to="/">
                 <h1 className="text-3xl font-bold tracking-wide">
-                  <span className="text-[#C4973C]">THREOMEGA</span>
+                  <span className="text-[#C4973C]">THREOMEGA - CV</span>
                   <span className="text-[#C4973C] align-super text-sm">™</span>
-                  <span className="text-[#DC2626] ml-1">3ω - CV</span>
-                </h1>
+                    <span className="text-[#DC2626] ml-1">3ω</span>
+                  </h1>
               </Link>
             </div>
 

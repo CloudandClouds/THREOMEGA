@@ -27,7 +27,7 @@ const ForDoctorsPage = () => {
     return (
         <div className="min-h-screen bg-white">
             <Navbar />
-            
+
             {/* HERO SECTION */}
             <div className="relative pt-32 pb-20 px-6 overflow-hidden bg-gradient-to-br from-gray-100 via-gray-50 to-white">
                 <div className="max-w-7xl mx-auto relative z-10 text-center">
@@ -40,7 +40,7 @@ const ForDoctorsPage = () => {
                         Evidence-Based Omega-3 Therapy for Your Dialysis Patients
                     </h1>
                     <p className="text-gray-600 text-xl md:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed">
-                        Access clinical trial data, dosing protocols, and professional resources for <span className="font-bold text-[#8B0000]">Theromega™</span>
+                        Access clinical trial data, dosing protocols, and professional resources for <span className="font-bold text-[#8B0000]">Theromega - CV™</span>
                     </p>
 
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-5xl mx-auto mt-16">
@@ -122,27 +122,27 @@ const ForDoctorsPage = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {[
-                            { 
-                                icon: <TrendingDown className="w-8 h-8" />, 
-                                title: "Reduced Inflammation", 
+                            {
+                                icon: <TrendingDown className="w-8 h-8" />,
+                                title: "Reduced Inflammation",
                                 desc: "Significant decrease in hs-CRP and inflammatory cytokines",
                                 stat: "↓ 32% reduction"
                             },
-                            { 
-                                icon: <Activity className="w-8 h-8" />, 
-                                title: "Improved Lipid Profile", 
+                            {
+                                icon: <Activity className="w-8 h-8" />,
+                                title: "Improved Lipid Profile",
                                 desc: "Better triglyceride levels and HDL/LDL ratios",
                                 stat: "↓ 25% triglycerides"
                             },
-                            { 
-                                icon: <Heart className="w-8 h-8" />, 
-                                title: "Cardiovascular Protection", 
+                            {
+                                icon: <Heart className="w-8 h-8" />,
+                                title: "Cardiovascular Protection",
                                 desc: "Lower incidence of cardiac events and hospitalizations",
                                 stat: "↓ 40% risk reduction"
                             },
-                            { 
-                                icon: <Shield className="w-8 h-8" />, 
-                                title: "Safety Profile", 
+                            {
+                                icon: <Shield className="w-8 h-8" />,
+                                title: "Safety Profile",
                                 desc: "Well-tolerated with minimal adverse effects",
                                 stat: "> 95% adherence"
                             }
@@ -177,7 +177,7 @@ const ForDoctorsPage = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                         <div className="bg-white/70 backdrop-blur-sm rounded-3xl p-10 border-2 border-[#D4AF37]/10 shadow-lg">
                             <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Recommended Dosing</h3>
-                            
+
                             <div className="space-y-6">
                                 <div className="bg-white rounded-2xl p-6 border-2 border-[#D4AF37]/20">
                                     <h4 className="font-bold text-gray-900 text-lg mb-3">Standard Dose</h4>
@@ -195,7 +195,7 @@ const ForDoctorsPage = () => {
 
                         <div className="bg-white/70 backdrop-blur-sm rounded-3xl p-10 border-2 border-[#D4AF37]/10 shadow-lg">
                             <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Monitoring Parameters</h3>
-                            
+
                             <div className="space-y-6">
                                 <div className="flex items-start gap-4">
                                     <CheckCircle2 className="w-6 h-6 text-[#8B0000] flex-shrink-0 mt-1" />
@@ -251,21 +251,21 @@ const ForDoctorsPage = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {[
-                            { 
-                                icon: <FileText className="w-10 h-10" />, 
-                                title: "Clinical Monograph", 
+                            {
+                                icon: <FileText className="w-10 h-10" />,
+                                title: "Clinical Monograph",
                                 desc: "Comprehensive review of Theromega™ in dialysis",
                                 action: "Download PDF"
                             },
-                            { 
-                                icon: <Users className="w-10 h-10" />, 
-                                title: "Patient Education", 
+                            {
+                                icon: <Users className="w-10 h-10" />,
+                                title: "Patient Education",
                                 desc: "Handouts and brochures for your patients",
                                 action: "View Materials"
                             },
-                            { 
-                                icon: <Award className="w-10 h-10" />, 
-                                title: "CME Credits", 
+                            {
+                                icon: <Award className="w-10 h-10" />,
+                                title: "CME Credits",
                                 desc: "Accredited continuing medical education",
                                 action: "Register Now"
                             }
@@ -331,7 +331,7 @@ const ForDoctorsPage = () => {
                                         </div>
                                         <h3 className="text-3xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'serif' }}>Registration Received</h3>
                                         <p className="text-gray-500">Thank you, Doctor. Our medical team will reach out to you within 24-48 hours with more information.</p>
-                                        <button 
+                                        <button
                                             onClick={() => setSubmitted(false)}
                                             className="mt-10 text-[#D4AF37] font-bold text-sm uppercase tracking-widest hover:underline"
                                         >
@@ -348,62 +348,62 @@ const ForDoctorsPage = () => {
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                             <div className="md:col-span-2">
                                                 <label className={labelClasses}><User className="w-3.5 h-3.5" /> Full Name</label>
-                                                <input 
-                                                    type="text" 
+                                                <input
+                                                    type="text"
                                                     placeholder="Dr. Sathish Kumar"
                                                     value={formData.name}
                                                     onChange={e => setFormData({...formData, name: e.target.value})}
                                                     className={inputClasses}
-                                                    required 
+                                                    required
                                                 />
                                             </div>
                                             <div>
                                                 <label className={labelClasses}><Stethoscope className="w-3.5 h-3.5" /> Specialty</label>
-                                                <input 
-                                                    type="text" 
+                                                <input
+                                                    type="text"
                                                     placeholder="Nephrology"
                                                     value={formData.specility}
                                                     onChange={e => setFormData({...formData, specility: e.target.value})}
                                                     className={inputClasses}
-                                                    required 
+                                                    required
                                                 />
                                             </div>
                                             <div>
                                                 <label className={labelClasses}><Building2 className="w-3.5 h-3.5" />Hospital / Institution</label>
-                                                <input 
-                                                    type="text" 
+                                                <input
+                                                    type="text"
                                                     placeholder="General Hospital"
                                                     value={formData.institution}
                                                     onChange={e => setFormData({...formData, institution: e.target.value})}
                                                     className={inputClasses}
-                                                    required 
+                                                    required
                                                 />
                                             </div>
                                             <div>
                                                 <label className={labelClasses}><Mail className="w-3.5 h-3.5" /> Email Address</label>
-                                                <input 
-                                                    type="email" 
+                                                <input
+                                                    type="email"
                                                     placeholder="dr.smith@hospital.com"
                                                     value={formData.email}
                                                     onChange={e => setFormData({...formData, email: e.target.value})}
                                                     className={inputClasses}
-                                                    required 
+                                                    required
                                                 />
                                             </div>
                                             <div>
                                                 <label className={labelClasses}><Phone className="w-3.5 h-3.5" /> Mobile Number</label>
-                                                <input 
-                                                    type="tel" 
+                                                <input
+                                                    type="tel"
                                                     placeholder="+91 98778-90000"
                                                     value={formData.mobile}
                                                     onChange={e => setFormData({...formData, mobile: e.target.value})}
                                                     className={inputClasses}
-                                                    required 
+                                                    required
                                                 />
                                             </div>
                                             <div className="md:col-span-2">
                                                 <label className={labelClasses}>Message / Inquiry</label>
-                                                <textarea 
+                                                <textarea
                                                     rows="4"
                                                     placeholder="I would like to receive more information about the PISCES-HD trial results..."
                                                     value={formData.message}
@@ -413,7 +413,7 @@ const ForDoctorsPage = () => {
                                             </div>
                                         </div>
 
-                                        <button 
+                                        <button
                                             type="submit"
                                             className="w-full bg-[#8B0000] hover:bg-[#A50000] text-white font-bold py-5 rounded-2xl transition-all duration-300 transform hover:scale-[1.02] flex items-center justify-center gap-3 shadow-lg hover:shadow-xl mt-4 group"
                                         >

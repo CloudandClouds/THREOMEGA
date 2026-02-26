@@ -5,31 +5,37 @@ const FAQ = () => {
     const [openIndex, setOpenIndex] = useState(null);
 
     const faqs = [
-        {
-            question: 'Is a prescription required for ThreOmega™ - CV ?',
-            answer: 'ThreOmega™ is formulated as a high-potency medical food/supplement and does not require a formal prescription. However, due to its clinical-strength formulation, we strongly advise consulting your nephrologist or dialysis team before initiation.'
-        },
-        {
-            question: 'What is the expected timeframe for clinical results?',
-            answer: 'Landmark clinical trials demonstrate significant cardiovascular risk reduction after 6 months of consistent adherence. Many patients report improvements in overall vitality and metabolic stability within the first 8-12 weeks.'
-        },
-        {
-            question: 'Are there any documented side effects?',
-            answer: 'ThreOmega™ is exceptionally well-tolerated. Rare reports of mild gastrointestinal effects (e.g., aftertaste) are typically mitigated by following the BD (twice daily) dosing protocol with meals.'
-        },
-        {
-            question: 'Can ThreOmega™ be used with anticoagulant therapy?',
-            answer: 'Omega-3 fatty acids possess mild naturally-occurring antiplatelet properties. Patients on blood-thinning medications should have their coagulation profiles monitored regularly by their healthcare provider.'
-        },
-        {
-            question: 'What is the recommended storage protocol?',
-            answer: 'Maintain in a cool, dry environment (below 25°C/77°F). Protect from direct UV exposure and ensure the airtight seal is maintained between uses to prevent oxidation of the delicate EPA/DHA molecules.'
-        },
-        {
-            question: 'Is this product suitable for vegetarian diets?',
-            answer: 'No. ThreOmega™ utilizes ultra-purify marine-sourced oils to achieve the specific EPA/DHA concentrations mandated by the FOCUS-HD protocol. It is encapsulated in pharmaceutical-grade bovine gelatin.'
-        }
-    ];
+      {
+        question: 'Is a prescription required for ThreOmega - CV™   ?',
+        answer:
+          'ThreOmega - CV™ is formulated as a high-potency medical food/supplement and does not require a formal prescription. However, due to its clinical-strength formulation, we strongly advise consulting your nephrologist or dialysis team before initiation.',
+      },
+      {
+        question: 'What is the expected timeframe for clinical results?',
+        answer:
+          'Landmark clinical trials demonstrate significant cardiovascular risk reduction after 6 months of consistent adherence. Many patients report improvements in overall vitality and metabolic stability within the first 8-12 weeks.',
+      },
+      {
+        question: 'Are there any documented side effects?',
+        answer:
+          'ThreOmega - CV™ is exceptionally well-tolerated. Rare reports of mild gastrointestinal effects (e.g., aftertaste) are typically mitigated by following the BD (twice daily) dosing protocol with meals.',
+      },
+      {
+        question: 'Can ThreOmega - CV™ be used with anticoagulant therapy?',
+        answer:
+          'Omega-3 fatty acids possess mild naturally-occurring antiplatelet properties. Patients on blood-thinning medications should have their coagulation profiles monitored regularly by their healthcare provider.',
+      },
+      {
+        question: 'What is the recommended storage protocol?',
+        answer:
+          'Maintain in a cool, dry environment (below 25°C/77°F). Protect from direct UV exposure and ensure the airtight seal is maintained between uses to prevent oxidation of the delicate EPA/DHA molecules.',
+      },
+      {
+        question: 'Is this product suitable for vegetarian diets?',
+        answer:
+          'No. ThreOmega™ utilizes ultra-purify marine-sourced oils to achieve the specific EPA/DHA concentrations mandated by the FOCUS-HD protocol. It is encapsulated in pharmaceutical-grade bovine gelatin.',
+      },
+    ]
 
     const toggleFAQ = (index) => {
         setOpenIndex(openIndex === index ? null : index);
@@ -54,8 +60,8 @@ const FAQ = () => {
                     {/* Accordion List */}
                     <div className="space-y-4">
                         {faqs.map((faq, index) => (
-                            <div 
-                                key={index} 
+                            <div
+                                key={index}
                                 className={`group rounded-[32px] border-2 transition-all duration-500 overflow-hidden ${
                                     openIndex === index ? 'border-[#D4AF37] bg-[#FAF9F6]' : 'border-gray-100 bg-white hover:border-[#D4AF37]/30'
                                 }`}
@@ -73,7 +79,7 @@ const FAQ = () => {
                                         <ChevronDown className="w-5 h-5" />
                                     </div>
                                 </button>
-                                
+
                                 <div className={`transition-all duration-500 ease-in-out ${
                                     openIndex === index ? 'max-h-[300px] opacity-100' : 'max-h-0 opacity-0 pointer-events-none'
                                 }`}>
@@ -111,7 +117,7 @@ const FAQ = () => {
                                         <span className="px-3 py-1 bg-gray-50 rounded-lg">FOCUS-HD Protocol</span>
                                         <span className="px-3 py-1 bg-gray-50 rounded-lg">Global Study</span>
                                     </div>
-                                    
+
                                     <div className="flex flex-col sm:flex-row gap-6">
                                         <button className="px-10 py-5 bg-gray-900 hover:bg-black text-white font-bold rounded-2xl transition-all shadow-xl hover:shadow-2xl flex items-center justify-center gap-3">
                                             <Download className="w-5 h-5" />
