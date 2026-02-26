@@ -13,7 +13,7 @@ const BrandSection = ({ onNext }) => {
             <span className="bg-gradient-to-r from-[#D4AF37] via-[#B8860B] to-[#8B0000] bg-clip-text text-transparent">3ω</span>
           </div>
           <h1 className="text-4xl font-bold text-gray-900 mb-2" style={{ fontFamily: 'serif' }}>
-            ThreOmega™
+            ThreOmega™ -CV
           </h1>
           <p className="text-[#D4AF37] text-xs tracking-[0.3em] font-semibold uppercase">
             Omega-3 for Hemodialysis Patients

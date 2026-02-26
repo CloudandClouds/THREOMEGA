@@ -7,17 +7,21 @@ const ProductShowcase = () => {
             {/* Background Accents */}
             <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#D4AF37]/5 rounded-full blur-[100px] -mr-64 -mt-64"></div>
 
-            <div className="max-w-7xl mx-auto relative z-10">
-                {/* Header */}
-                <div className="text-center mb-20">
-                    <h2 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-[#8B0000] via-[#D4AF37] to-[#8B0000] bg-clip-text text-transparent mb-8" style={{ fontFamily: 'serif' }}>
-                        ThreOmega<span className="text-2xl align-super text-sm ml-1 text-gray-400">™</span>{' '}
-                        <span className="text-gray-900">3ω</span>
-                    </h2>
-                    <p className="text-gray-500 text-xl max-w-3xl mx-auto leading-relaxed italic">
-                        The definitive Omega-3 solution specifically engineered for the unique metabolic requirements of hemodialysis patients.
-                    </p>
-                </div>
+        <div className="max-w-7xl mx-auto relative z-10">
+          {/* Header */}
+          <div className="text-center mb-20">
+            <h2
+              className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-[#8B0000] via-[#D4AF37] to-[#8B0000] bg-clip-text text-transparent mb-8"
+              style={{ fontFamily: 'serif' }}
+            >
+              ThreOmega<span className="text-2xl align-super text-sm ml-1 text-gray-400">™</span>{' '}
+              <span className="text-gray-900">3ω - CV</span>
+            </h2>
+            <p className="text-gray-500 text-xl max-w-3xl mx-auto leading-relaxed italic">
+              The definitive Omega-3 solution specifically engineered for the unique metabolic
+              requirements of hemodialysis patients.
+            </p>
+          </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
                     {/* Left: Product Visual */}
@@ -30,11 +34,11 @@ const ProductShowcase = () => {
                                 <span className="text-[10px] font-bold uppercase tracking-widest text-gray-700">Clinical Formulation</span>
                              </div>
 
-                             <img
-                                src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&q=80"
-                                alt="ThreOmega Supplement Bottle"
-                                className="w-full h-auto rounded-3xl mix-blend-multiply transition-transform duration-700 group-hover:scale-105"
-                             />
+                <img
+                  src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&q=80"
+                  alt="ThreOmega - CV Supplement Bottle"
+                  className="w-full h-auto rounded-3xl mix-blend-multiply transition-transform duration-700 group-hover:scale-105"
+                />
 
                              <div className="mt-8 flex justify-center">
                                 <button className="px-10 py-5 bg-gray-900 hover:bg-black text-white font-bold rounded-2xl transition-all shadow-xl hover:shadow-2xl flex items-center gap-3">

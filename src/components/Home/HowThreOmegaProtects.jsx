@@ -49,7 +49,7 @@ const HowThreOmegaProtects = () => {
                             </h2>
                             
                             <p className="text-xl text-gray-500 mb-12 leading-relaxed">
-                                ThreOmega™ isn't just a supplement—it's a precision-engineered clinical protocol designed to safeguard the dialysis heart at a cellular level.
+                                ThreOmega™ - CV isn't just a supplement—it's a precision-engineered clinical protocol designed to safeguard the dialysis heart at a cellular level.
                             </p>
 
                             <button className="flex items-center gap-4 group">
