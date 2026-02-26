@@ -6,9 +6,9 @@ const FAQ = () => {
 
     const faqs = [
       {
-        question: 'Is a prescription required for ThreOmega - CV™   ?',
+        question: 'Is a prescription required for ThreOmegaCV™   ?',
         answer:
-          'ThreOmega - CV™ is formulated as a high-potency medical food/supplement and does not require a formal prescription. However, due to its clinical-strength formulation, we strongly advise consulting your nephrologist or dialysis team before initiation.',
+          'ThreOmegaCV™ is formulated as a high-potency medical food/supplement and does not require a formal prescription. However, due to its clinical-strength formulation, we strongly advise consulting your nephrologist or dialysis team before initiation.',
       },
       {
         question: 'What is the expected timeframe for clinical results?',
@@ -18,10 +18,10 @@ const FAQ = () => {
       {
         question: 'Are there any documented side effects?',
         answer:
-          'ThreOmega - CV™ is exceptionally well-tolerated. Rare reports of mild gastrointestinal effects (e.g., aftertaste) are typically mitigated by following the BD (twice daily) dosing protocol with meals.',
+          'ThreOmegaCV™ is exceptionally well-tolerated. Rare reports of mild gastrointestinal effects (e.g., aftertaste) are typically mitigated by following the BD (twice daily) dosing protocol with meals.',
       },
       {
-        question: 'Can ThreOmega - CV™ be used with anticoagulant therapy?',
+        question: 'Can ThreOmegaCV™ be used with anticoagulant therapy?',
         answer:
           'Omega-3 fatty acids possess mild naturally-occurring antiplatelet properties. Patients on blood-thinning medications should have their coagulation profiles monitored regularly by their healthcare provider.',
       },

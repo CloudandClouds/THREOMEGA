@@ -11,12 +11,14 @@ const ProductShowcase = () => {
           {/* Header */}
           <div className="text-center mb-20">
             <h2
-              className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-[#8B0000] via-[#D4AF37] to-[#8B0000] bg-clip-text text-transparent mb-8"
+              className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent mb-8"
               style={{ fontFamily: 'serif' }}
             >
-              ThreOmega - CV
-              <span className="text-2xl align-top text-sm ml-1 text-gray-400">™</span>{' '}
-              <span className="text-gray-900">3ω</span>
+
+              <span className="text-[#C4973C]">ThreOmega</span>
+              <span className="text-[#DC2626] ml-1">CV</span>
+              <span className="text-[#C4973C] align-top text-sm">™</span>{' '}
+              <span className="text-[#3e26dc] ml-1">3ω</span>
             </h2>
             <p className="text-gray-500 text-xl max-w-3xl mx-auto leading-relaxed italic">
               The definitive Omega-3 solution specifically engineered for the unique metabolic
