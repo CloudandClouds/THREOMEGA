@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import QRCode from 'qrcode';
 import { ShieldCheck, Monitor, Smartphone, Clock, Award } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const QRLanding = () => {
   const [qrCodeUrl, setQrCodeUrl] = useState('');
@@ -30,6 +31,11 @@ const QRLanding = () => {
 
   return (
     <div className="min-h-screen bg-white relative overflow-hidden flex flex-col items-center justify-center p-6 text-gray-900">
+      <SEO 
+        title="Start PISCES-HD Exercise"
+        description="Scan the QR code to begin the PISCES-HD evidence review exercise."
+        keywords="PISCES-HD trial, TheromegaCV, evidence review, nephrology"
+      />
       {/* Premium Background Effects */}
       <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-[#D4AF37] rounded-full mix-blend-multiply filter blur-[120px] opacity-[0.08]"></div>
       <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-[#8B0000] rounded-full mix-blend-multiply filter blur-[120px] opacity-[0.08]"></div>

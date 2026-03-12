@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { Lock, Mail } from 'lucide-react';
 import { API_URL } from '../utils/url';
-
+import SEO from '../components/SEO';
 
 
 const AdminLogin = () => {
@@ -36,6 +36,10 @@ const AdminLogin = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-gray-100 flex items-center justify-center p-6">
+      <SEO 
+        title="Admin Login"
+        description="Admin Login for Ponoogun"
+      />
       <div className="max-w-md w-full">
         <div className="text-center mb-8">
           <div className="text-5xl font-bold bg-gradient-to-r from-[#D4AF37] via-[#B8860B] to-[#8B0000] bg-clip-text text-transparent mb-3" style={{fontFamily: 'Georgia, serif'}}>

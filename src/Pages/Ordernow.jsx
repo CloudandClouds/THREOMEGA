@@ -2,11 +2,17 @@ import React, { useState } from 'react';
 import Navbar from '../components/Home/Navbar';
 import CallToActionAndFooter from '../components/Home/CallToActionAndFooter';
 import ProductBuySection from '../components/Home/ProductBuySection';
+import SEO from '../components/SEO';
 
 const OrdernowPage = () => {
     
     return (
       <div className="min-h-screen bg-white">
+        <SEO 
+          title="Order Now"
+          description="Purchase ThreOmegaCV, an advanced cardiac protection medication with clinically proven benefits for maintenance hemodialysis patients. Secure your heart health today."
+          keywords="buy ThreOmegaCV, order cardiac protection medication, hemodialysis omega-3 supplement, PISCES trial, heart care, purchase medication"
+        />
         <Navbar />
 
        <ProductBuySection/>
