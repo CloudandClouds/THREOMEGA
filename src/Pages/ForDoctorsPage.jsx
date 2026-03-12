@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Navbar from '../components/Home/Navbar';
 import CallToActionAndFooter from '../components/Home/CallToActionAndFooter';
 import { User, Mail, Phone, Building2, Stethoscope, Send, CheckCircle2, FileText, Award, Users, BookOpen, Download, Heart, Activity, TrendingDown, Shield, Video, Calendar } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const ForDoctorsPage = () => {
     const [formData, setFormData] = useState({
@@ -26,6 +27,11 @@ const ForDoctorsPage = () => {
 
     return (
         <div className="min-h-screen bg-white">
+            <SEO 
+                title="For Healthcare Professionals"
+                description="Access clinical trial data, dosing protocols, and professional resources for TheromegaCV. Evidence-Based Omega-3 Therapy for Dialysis Patients."
+                keywords="nephrology resources, hemodialysis clinical trial, PISCES-HD trial, omega-3 therapy, TheromegaCV for doctors"
+            />
             <Navbar />
 
             {/* HERO SECTION */}

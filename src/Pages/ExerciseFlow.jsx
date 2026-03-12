@@ -10,6 +10,7 @@ import PrizesSection from '../components/sections/PrizesSection';
 import RegistrationSection from '../components/sections/RegistrationSection';
 import ConfirmationSection from '../components/sections/ConfirmationSection';
 import { API_URL } from '../utils/url'
+import SEO from '../components/SEO';
 
 const ExerciseFlow = () => {
   const { sessionId } = useParams();
@@ -162,46 +163,66 @@ const ExerciseFlow = () => {
 
   if (currentSection.type === 'question') {
     return (
-      <Component
-        {...commonProps}
-        {...currentSection.questionData}
-        answer={answers[currentSection.questionData.index]}
-        onAnswer={(optionIndex) => handleAnswer(currentSection.questionData.index, optionIndex)}
-      />
+      <>
+        <SEO 
+          title={`Question ${currentSection.questionData.progress} - PISCES-HD Exercise`} 
+          description="PISCES-HD Evidence Review Exercise"
+        />
+        <Component
+          {...commonProps}
+          {...currentSection.questionData}
+          answer={answers[currentSection.questionData.index]}
+          onAnswer={(optionIndex) => handleAnswer(currentSection.questionData.index, optionIndex)}
+        />
+      </>
     );
   }
 
   if (currentSection.type === 'brand') {
     return (
-      <Component
-        {...commonProps}
-        onNext={handleFinalSubmit}
-      />
+      <>
+        <SEO title="TheromegaCV - Discover The Difference" />
+        <Component
+          {...commonProps}
+          onNext={handleFinalSubmit}
+        />
+      </>
     );
   }
 
   if (currentSection.type === 'registration') {
     return (
-      <Component
-        {...commonProps}
-        formData={formData}
-        setFormData={setFormData}
-        onSubmit={handleRegistration}
-      />
+      <>
+        <SEO title="Registration - PISCES-HD Exercise" />
+        <Component
+          {...commonProps}
+          formData={formData}
+          setFormData={setFormData}
+          onSubmit={handleRegistration}
+        />
+      </>
     );
   }
 
   if (currentSection.type === 'confirmation') {
     return (
-      <Component
-        {...commonProps}
-        formData={formData}
-        onComplete={handleComplete}
-      />
+      <>
+        <SEO title="Complete - PISCES-HD Exercise" />
+        <Component
+          {...commonProps}
+          formData={formData}
+          onComplete={handleComplete}
+        />
+      </>
     );
   }
 
-  return <Component {...commonProps} />;
+  return (
+    <>
+      <SEO title="PISCES-HD Evidence Review" />
+      <Component {...commonProps} />
+    </>
+  );
 };
 
 export default ExerciseFlow;

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Navbar from '../components/Home/Navbar';
 import CallToActionAndFooter from '../components/Home/CallToActionAndFooter';
 import { User, Mail, Phone, MapPin, Heart, Send, CheckCircle2, Activity, TrendingDown, Shield, Clock, Download, ShoppingCart, FileText, Droplet } from 'lucide-react';
+import SEO from '../components/SEO';
 
 const ForPatientsPage = () => {
     const [formData, setFormData] = useState({
@@ -31,6 +32,11 @@ const ForPatientsPage = () => {
 
     return (
       <div className="min-h-screen bg-white">
+        <SEO 
+          title="For Patients"
+          description="Protect your heart while on dialysis with TheromegaCV. Clinically proven results to reduce cardiovascular risk."
+          keywords="dialysis heart protection, cardiovascular risk dialysis, omega-3 for patients, TheromegaCV"
+        />
         <Navbar />
 
         {/* HERO SECTION */}

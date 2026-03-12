@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { LogOut, Users, Award, Download, Search, Trophy, CheckCircle } from 'lucide-react';
 import { API_URL } from '../utils/url';
+import SEO from '../components/SEO';
 
 const AdminDashboard = () => {
   const [activeTab, setActiveTab] = useState('registrations'); // 'registrations' or 'prizes'
@@ -159,6 +160,7 @@ const AdminDashboard = () => {
   if (loading) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 flex items-center justify-center">
+        <SEO title="Admin Dashboard" />
         <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600"></div>
       </div>
     );
@@ -166,6 +168,10 @@ const AdminDashboard = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+      <SEO 
+        title="Admin Dashboard"
+        description="Ponoogun Admin Dashboard for managing registrations and prizes."
+      />
       {/* Header */}
       <div className="bg-white border-b border-slate-200 shadow-sm">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">

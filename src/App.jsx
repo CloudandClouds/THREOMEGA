@@ -10,6 +10,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 import AdminDashboard from './Pages/AdminDashboard';
 import ForDoctorsPage from './Pages/ForDoctorsPage';
 import ForPatientsPage from './Pages/ForPatientsPage';
+import OrdernowPage from './Pages/Ordernow';
 
 
 function App() {
@@ -19,7 +20,9 @@ function App() {
          <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/doctors" element={<ForDoctorsPage />} />
+
         <Route path="/patients" element={<ForPatientsPage />} />
+        <Route path="/OrderNow" element={<OrdernowPage />} />
         <Route path="/QRLanding" element={<QRLanding />} />
         <Route path="/exercise/:sessionId" element={<ExerciseFlow />} />
         <Route path="/login" element={<AdminLogin />} />

@@ -45,12 +45,12 @@ class Navbar extends Component {
               >
                 SCIENCE
               </a>
-              <a
-                href="#order"
+              <Link
+                to="/OrderNow"
                 className="text-gray-900 hover:text-[#C4973C] px-3 py-2 text-sm font-medium transition-colors"
               >
                 ORDER NOW
-              </a>
+              </Link>
             </div>
 
             {/* Right Side - Login and Cart */}
