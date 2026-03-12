@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Navbar from '../components/Home/Navbar';
 import Banner from '../components/Home/Banner';
+import ProductBuySection from '../components/Home/ProductBuySection';
 import StatsCards from '../components/Home/StatsCards';
 import PiscesTrial from '../components/Home/PiscesTrial';
 import TrialResults from '../components/Home/TrialResults';
@@ -21,6 +22,7 @@ class HomePage extends Component {
       <div className="min-h-screen bg-white">
         <Navbar />
         <Banner />
+        <ProductBuySection />
         <ProgramInfo />
         <Scoreboard />
         <StatsCards/>

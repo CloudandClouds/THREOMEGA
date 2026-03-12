@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight, ShieldCheck, Activity, Award } from 'lucide-react';
 import image from "../../assets/womans-hand-holding-fish-oil-supplements.jpg";
+// import image from '../../assets/threomega_product_bottle.png';
 
 const Banner = () => {
     return (

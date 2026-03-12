@@ -28,7 +28,7 @@ const TestimonialsAndPricing = () => {
       outcome: 'Clinical Adherence',
       quote:
         'The ThreOmega - CV protocol aligns perfectly with the PISCES-HD findings. It provides the precise EPA/DHA ratio required for dialysis-specific cardiac protection.',
-      image: 'https://images.unsplash.com/photo-1559839734-2b71f153a827?w=400&q=80',
+     image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&q=80"
     },
   ]
 

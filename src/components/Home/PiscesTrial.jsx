@@ -3,7 +3,7 @@ import { Microscope, PlayCircle, FileText, Calendar, Users, Database, Globe, Arr
 
 const PiscesTrial = () => {
     return (
-        <section className="py-32 px-6 bg-white overflow-hidden relative" id="science">
+        <section className="py-10 px-6 bg-white overflow-hidden relative" id="science">
             {/* Background Architecture */}
             <div className="absolute top-0 left-0 w-1/3 h-full bg-gray-50/50 -skew-x-12 -translate-x-32"></div>
             

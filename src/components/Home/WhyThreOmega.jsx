@@ -48,7 +48,7 @@ const WhyThreOmega = () => {
     ];
 
     return (
-        <section className="py-24 px-6 bg-white overflow-hidden relative">
+        <section className="py-10 px-6 bg-white overflow-hidden relative">
             <div className="max-w-7xl mx-auto relative z-10">
                 {/* Header */}
                 <div className="text-center mb-20">
